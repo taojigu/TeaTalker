@@ -21,6 +21,7 @@
 		CED577BE18A5D3430025C83C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED5779F18A5D3420025C83C /* Foundation.framework */; };
 		CED577C618A5D3430025C83C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED577C418A5D3430025C83C /* InfoPlist.strings */; };
 		CED577C918A5D3430025C83C /* TeaTalkerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED577C818A5D3430025C83C /* TeaTalkerTests.m */; };
+		CEE94E7F18A62123006A24F5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE94E7E18A62123006A24F5 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CED577C518A5D3430025C83C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CED577C718A5D3430025C83C /* TeaTalkerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeaTalkerTests.h; sourceTree = "<group>"; };
 		CED577C818A5D3430025C83C /* TeaTalkerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeaTalkerTests.m; sourceTree = "<group>"; };
+		CEE94E7E18A62123006A24F5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				CED577AC18A5D3420025C83C /* AppDelegate.h */,
 				CED577AD18A5D3420025C83C /* AppDelegate.m */,
 				CED577A418A5D3420025C83C /* Supporting Files */,
+				CEE94E7E18A62123006A24F5 /* MainStoryboard.storyboard */,
 			);
 			path = TeaTalker;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				CED577B018A5D3420025C83C /* Default.png in Resources */,
 				CED577B218A5D3420025C83C /* Default@2x.png in Resources */,
 				CED577B418A5D3420025C83C /* Default-568h@2x.png in Resources */,
+				CEE94E7F18A62123006A24F5 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +439,7 @@
 				CED577CE18A5D3430025C83C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CED577CF18A5D3430025C83C /* Build configuration list for PBXNativeTarget "TeaTalkerTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +448,7 @@
 				CED577D118A5D3430025C83C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
