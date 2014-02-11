@@ -84,6 +84,7 @@
 		CED5779118A5D3420025C83C = {
 			isa = PBXGroup;
 			children = (
+				CEE94E8018A8EF14006A24F5 /* ViewController */,
 				CED577A318A5D3420025C83C /* TeaTalker */,
 				CED577C118A5D3430025C83C /* TeaTalkerTests */,
 				CED5779C18A5D3420025C83C /* Frameworks */,
@@ -153,6 +154,13 @@
 				CED577C418A5D3430025C83C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEE94E8018A8EF14006A24F5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
