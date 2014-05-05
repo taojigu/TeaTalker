@@ -12,6 +12,9 @@
 #import "RequestUrlStringUtility.h"
 #import "TeaCategoryArrayParser.h"
 
+#define NameLabelTag 100
+#define CategoryImageViewTag 101
+
 
 
 @interface TeaCategoryTableViewController ()<ASIHTTPRequestDelegate>
@@ -59,20 +62,23 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [self.teaCategoryArray count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    TeaCategory*tc=[self.teaCategoryArray objectAtIndex:section];
-    return tc.species.count;
+    return [self.teaCategoryArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"SpeciesCellIdentifer";
+    static NSString *CellIdentifier = @"TeaCategoryCellIdentefer";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    UILabel*nameLabel=(UILabel*)[cell viewWithTag:NameLabelTag];
+    
+    TeaCategory*tc=[self.teaCategoryArray objectAtIndex:indexPath.row];
+    nameLabel.text=tc.categoryName;
     // Configure the cell...
     
     return cell;

@@ -11,6 +11,6 @@
 @implementation RequestUrlStringUtility
 
 +(NSString*)teaCategoryURLString{
-    return @"www.163.com";
+    return @"http://www.163.com";
 }
 @end
