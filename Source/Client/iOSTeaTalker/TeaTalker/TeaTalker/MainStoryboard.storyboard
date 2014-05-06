@@ -290,10 +290,10 @@
             </objects>
             <point key="canvasLocation" x="-723" y="-1082"/>
         </scene>
-        <!--Species Table View Controller-->
+        <!--Tea Category View Controller-->
         <scene sceneID="YpB-oT-u9u">
             <objects>
-                <tableViewController id="WBc-Zj-Y9N" customClass="SpeciesTableViewController" sceneMemberID="viewController">
+                <tableViewController id="WBc-Zj-Y9N" customClass="TeaCategoryViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZDv-Rd-97e">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

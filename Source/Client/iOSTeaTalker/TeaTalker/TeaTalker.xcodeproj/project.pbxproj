@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D8E8BB61918C26500922416 /* SpeciesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */; };
+		9D8E8BB91918CBBA00922416 /* Species.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB81918CBBA00922416 /* Species.m */; };
+		9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */; };
 		CED5779E18A5D3420025C83C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED5779D18A5D3420025C83C /* UIKit.framework */; };
 		CED577A018A5D3420025C83C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED5779F18A5D3420025C83C /* Foundation.framework */; };
 		CED577A218A5D3420025C83C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED577A118A5D3420025C83C /* CoreGraphics.framework */; };
@@ -22,7 +25,6 @@
 		CED577C618A5D3430025C83C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED577C418A5D3430025C83C /* InfoPlist.strings */; };
 		CED577C918A5D3430025C83C /* TeaTalkerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED577C818A5D3430025C83C /* TeaTalkerTests.m */; };
 		CEE94E7F18A62123006A24F5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE94E7E18A62123006A24F5 /* MainStoryboard.storyboard */; };
-		CEE94E8318A9C3C8006A24F5 /* TeaCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE94E8218A9C3C8006A24F5 /* TeaCategoryViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEE94E8618A9C526006A24F5 /* TeaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE94E8518A9C526006A24F5 /* TeaTableViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEE94E8918A9CA24006A24F5 /* TopicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE94E8818A9CA24006A24F5 /* TopicTableViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEE94E8F18A9D07B006A24F5 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE94E8E18A9D07B006A24F5 /* MoreViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -79,6 +81,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D8E8BB41918C26500922416 /* SpeciesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeciesDetailViewController.h; path = ViewController/SpeciesDetailViewController.h; sourceTree = "<group>"; };
+		9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeciesDetailViewController.m; path = ViewController/SpeciesDetailViewController.m; sourceTree = "<group>"; };
+		9D8E8BB71918CBBA00922416 /* Species.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Species.h; path = Model/Species.h; sourceTree = "<group>"; };
+		9D8E8BB81918CBBA00922416 /* Species.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Species.m; path = Model/Species.m; sourceTree = "<group>"; };
+		9D8E8BBA1918D06500922416 /* TeaCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaCategoryViewController.h; path = ViewController/TeaCategoryViewController.h; sourceTree = "<group>"; };
+		9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeaCategoryViewController.m; path = ViewController/TeaCategoryViewController.m; sourceTree = "<group>"; };
 		CED5779A18A5D3420025C83C /* TeaTalker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeaTalker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED5779D18A5D3420025C83C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CED5779F18A5D3420025C83C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,8 +107,6 @@
 		CED577C718A5D3430025C83C /* TeaTalkerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeaTalkerTests.h; sourceTree = "<group>"; };
 		CED577C818A5D3430025C83C /* TeaTalkerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeaTalkerTests.m; sourceTree = "<group>"; };
 		CEE94E7E18A62123006A24F5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		CEE94E8118A9C3C8006A24F5 /* TeaCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaCategoryViewController.h; path = ViewController/TeaCategoryViewController.h; sourceTree = "<group>"; };
-		CEE94E8218A9C3C8006A24F5 /* TeaCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeaCategoryViewController.m; path = ViewController/TeaCategoryViewController.m; sourceTree = "<group>"; };
 		CEE94E8418A9C526006A24F5 /* TeaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaTableViewController.h; path = ViewController/TeaTableViewController.h; sourceTree = "<group>"; };
 		CEE94E8518A9C526006A24F5 /* TeaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeaTableViewController.m; path = ViewController/TeaTableViewController.m; sourceTree = "<group>"; };
 		CEE94E8718A9CA24006A24F5 /* TopicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicTableViewController.h; path = ViewController/TopicTableViewController.h; sourceTree = "<group>"; };
@@ -305,8 +311,6 @@
 		CEE94E8018A8EF14006A24F5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CEE94E8118A9C3C8006A24F5 /* TeaCategoryViewController.h */,
-				CEE94E8218A9C3C8006A24F5 /* TeaCategoryViewController.m */,
 				CEE94E8418A9C526006A24F5 /* TeaTableViewController.h */,
 				CEE94E8518A9C526006A24F5 /* TeaTableViewController.m */,
 				CEE94E8718A9CA24006A24F5 /* TopicTableViewController.h */,
@@ -319,6 +323,10 @@
 				CEE94E9918AA1989006A24F5 /* SpeciesTableViewController.m */,
 				CEFD931318AB60CC00CD3F47 /* TeaCategoryTableViewController.h */,
 				CEFD931418AB60CC00CD3F47 /* TeaCategoryTableViewController.m */,
+				9D8E8BB41918C26500922416 /* SpeciesDetailViewController.h */,
+				9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */,
+				9D8E8BBA1918D06500922416 /* TeaCategoryViewController.h */,
+				9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -354,6 +362,8 @@
 				CEFD930718AB55D200CD3F47 /* TeaCategory.m */,
 				CEFD930918AB563700CD3F47 /* Topic.h */,
 				CEFD930A18AB563700CD3F47 /* Topic.m */,
+				9D8E8BB71918CBBA00922416 /* Species.h */,
+				9D8E8BB81918CBBA00922416 /* Species.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -615,10 +625,11 @@
 			files = (
 				CED577AA18A5D3420025C83C /* main.m in Sources */,
 				CED577AE18A5D3420025C83C /* AppDelegate.m in Sources */,
-				CEE94E8318A9C3C8006A24F5 /* TeaCategoryViewController.m in Sources */,
 				CEE94E8618A9C526006A24F5 /* TeaTableViewController.m in Sources */,
 				CEE94E8918A9CA24006A24F5 /* TopicTableViewController.m in Sources */,
 				CEE94E8F18A9D07B006A24F5 /* MoreViewController.m in Sources */,
+				9D8E8BB91918CBBA00922416 /* Species.m in Sources */,
+				9D8E8BB61918C26500922416 /* SpeciesDetailViewController.m in Sources */,
 				CEE94E9218AA0CFB006A24F5 /* FeedbackViewController.m in Sources */,
 				CEE94E9A18AA1989006A24F5 /* SpeciesTableViewController.m in Sources */,
 				CEFD930418AB537600CD3F47 /* TextTableViewCell.m in Sources */,
@@ -650,6 +661,7 @@
 				CEFD936518AB684F00CD3F47 /* ASIS3Request.m in Sources */,
 				CEFD936618AB684F00CD3F47 /* ASIS3ServiceRequest.m in Sources */,
 				CEFD936718AB684F00CD3F47 /* Reachability.m in Sources */,
+				9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */,
 				CEFD937718AB79FA00CD3F47 /* RequestUrlStringUtility.m in Sources */,
 				CEFD937B18AB804800CD3F47 /* TeaCategoryArrayParser.m in Sources */,
 			);
