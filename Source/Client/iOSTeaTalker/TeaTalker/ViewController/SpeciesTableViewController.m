@@ -60,6 +60,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    //UILabel*nameLabel=(UILabel*)[cell viewWithTag:Labe]
+
     
     return cell;
 }

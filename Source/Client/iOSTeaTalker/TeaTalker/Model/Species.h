@@ -11,10 +11,14 @@
 @interface Species : NSObject
 
 
+@property(nonatomic,strong)NSString*speciesId;
 @property(nonatomic,strong)NSString*name;
 @property(nonatomic,strong)NSString*introduction;
 @property(nonatomic,strong)NSMutableArray*imageInfoArray;
 @property(nonatomic,strong)NSString*cookText;
+@property(nonatomic,strong)NSMutableArray*cookImageInfoArray;
 
+
++(Species*)fakeSpecies:(NSInteger)speciesIndex;
 
 @end

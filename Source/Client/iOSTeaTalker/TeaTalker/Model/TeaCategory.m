@@ -8,6 +8,7 @@
 
 #import "TeaCategory.h"
 #import "ElementsContainer.h"
+#import "Species.h"
 @implementation TeaCategory
 
 
@@ -27,8 +28,12 @@
 
 +(TeaCategory*)fakeTeaCategory:(NSInteger)teaIndex{
     TeaCategory*result=[[TeaCategory alloc]init];
-    result.categoryId=[NSString stringWithFormat:@"CategoryId%i",teaIndex];
+    result.categoryId=[NSString stringWithFormat:@"CategoryId%li",(long)teaIndex];
     result.categoryName=@"绿茶";
+    for (NSInteger spcIndex=0; spcIndex<7; spcIndex++) {
+        Species*spc=[Species fakeSpecies:spcIndex];
+        [result.species.elementArray addObject:spc];
+    }
     return result;
 }
 

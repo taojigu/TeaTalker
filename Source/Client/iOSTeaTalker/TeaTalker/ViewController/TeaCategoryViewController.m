@@ -10,6 +10,10 @@
 #import "TeaCategory.h"
 #import "Species.h"
 
+#define ImageViewTag 101
+#define NameLabelTag 102
+
+
 @interface TeaCategoryViewController ()
 
 @end
@@ -56,16 +60,22 @@
     return [self.teaCategory.species count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SpeciesCellIdentifer" forIndexPath:indexPath];
+    Species*spc=[self.teaCategory.species.elementArray objectAtIndex:indexPath.row];
+    UILabel*nameLabel=(UILabel*)[cell viewWithTag:NameLabelTag];
+    nameLabel.text=spc.name;
+    
+    UIImageView*imageView=(UIImageView*)[cell viewWithTag:ImageViewTag];
+    imageView.image=[spc.imageInfoArray objectAtIndex:0];
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

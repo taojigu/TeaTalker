@@ -11,6 +11,7 @@
 #import "TeaCategory.h"
 #import "RequestUrlStringUtility.h"
 #import "TeaCategoryArrayParser.h"
+#import "TeaCategoryViewController.h"
 
 #define NameLabelTag 100
 #define CategoryImageViewTag 101
@@ -56,6 +57,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    UIViewController*dstvc=[segue destinationViewController];
+    if ([dstvc isKindOfClass:[TeaCategoryViewController class]]) {
+        UITableViewCell*cell=(UITableViewCell*)sender;
+        NSIndexPath*indexPath=[self.tableView indexPathForCell:cell];
+        TeaCategory*tc=[self.teaCategoryArray objectAtIndex:indexPath.row];
+        TeaCategoryViewController*tcvc=(TeaCategoryViewController*)dstvc;
+        tcvc.teaCategory=tc;
+    }
 }
 
 #pragma mark - Table view data source
@@ -123,6 +135,7 @@
 }
 */
 
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -135,6 +148,7 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
 
 #pragma mark AsiHttpRequestDelegate messages
 

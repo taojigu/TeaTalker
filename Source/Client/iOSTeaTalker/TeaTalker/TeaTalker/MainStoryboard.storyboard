@@ -306,8 +306,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="253" height="98"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" text="龙井" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBn-ml-i3e">
-                                            <rect key="frame" x="115" y="38" width="42" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" misplaced="YES" text="龙井" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBn-ml-i3e">
+                                            <rect key="frame" x="115" y="38" width="61" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="42" id="X1h-Pd-wRC"/>
                                             </constraints>

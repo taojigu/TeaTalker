@@ -26,6 +26,7 @@
     result.imageName=[NSString stringWithFormat:@"ImageName %i",imageIndex];
     result.width=80;
     result.height=120;
+    result.image=[UIImage imageNamed:DragonWellImageName];
     result.introduction=[NSString stringWithFormat:@"The image introduction for the image %i",imageIndex];
     return result;
 }

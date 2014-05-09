@@ -87,6 +87,7 @@
 		9D8E8BB81918CBBA00922416 /* Species.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Species.m; path = Model/Species.m; sourceTree = "<group>"; };
 		9D8E8BBA1918D06500922416 /* TeaCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaCategoryViewController.h; path = ViewController/TeaCategoryViewController.h; sourceTree = "<group>"; };
 		9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeaCategoryViewController.m; path = ViewController/TeaCategoryViewController.m; sourceTree = "<group>"; };
+		9D8E8BC2191CCC5400922416 /* ResourceConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourceConfigure.h; path = Model/Config/ResourceConfigure.h; sourceTree = "<group>"; };
 		CED5779A18A5D3420025C83C /* TeaTalker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeaTalker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED5779D18A5D3420025C83C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CED5779F18A5D3420025C83C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -223,6 +224,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D8E8BC5191CCC5700922416 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9D8E8BC2191CCC5400922416 /* ResourceConfigure.h */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
 		CED5779118A5D3420025C83C = {
 			isa = PBXGroup;
 			children = (
@@ -352,8 +361,8 @@
 		CEFD930518AB55A300CD3F47 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9D8E8BC5191CCC5700922416 /* Config */,
 				CEFD937818AB802C00CD3F47 /* Parser */,
-				CEFD931218AB59FE00CD3F47 /* FakeModel */,
 				CEFD930C18AB56A600CD3F47 /* ElementsContainer.h */,
 				CEFD930D18AB56A600CD3F47 /* ElementsContainer.m */,
 				CEFD930E18AB56A600CD3F47 /* ImageInfo.h */,
@@ -366,13 +375,6 @@
 				9D8E8BB81918CBBA00922416 /* Species.m */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		CEFD931218AB59FE00CD3F47 /* FakeModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = FakeModel;
 			sourceTree = "<group>";
 		};
 		CEFD931618AB680400CD3F47 /* Util */ = {

@@ -23,4 +23,5 @@
 
 +(ImageInfo*)fakeImageInfo:(NSInteger)imageIndex;
 +(ImageInfo*)imageInfoFromImage:(UIImage*)image;
+
 @end
