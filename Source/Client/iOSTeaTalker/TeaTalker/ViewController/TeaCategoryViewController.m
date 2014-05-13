@@ -9,9 +9,19 @@
 #import "TeaCategoryViewController.h"
 #import "TeaCategory.h"
 #import "Species.h"
+#import "ImageInfo.h"
 
 #define ImageViewTag 101
 #define NameLabelTag 102
+
+
+#define SpeciesDetailCellIentifer @"SpeciesCellIdentifer"
+#define TeaCategoryDetailCellIdentifer @"TeaCategoryDetail"
+#define TeaCategoryTopicCellIdentifer @"TeaCategoryTopic"
+
+#define DetailSeciton 0
+#define SpeciesSection 1
+#define TopicSection 2
 
 
 @interface TeaCategoryViewController ()
@@ -52,12 +62,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.teaCategory.species count];
+    return [self.teaCategory.species.elementArray count];
 }
 
 
@@ -69,7 +79,8 @@
     nameLabel.text=spc.name;
     
     UIImageView*imageView=(UIImageView*)[cell viewWithTag:ImageViewTag];
-    imageView.image=[spc.imageInfoArray objectAtIndex:0];
+    ImageInfo*info=[spc.imageInfoArray objectAtIndex:0];
+    imageView.image=info.image;
     
     // Configure the cell...
     
