@@ -17,6 +17,7 @@
 @property(nonatomic,strong)NSMutableArray*imageInfoArray;
 @property(nonatomic,strong)NSString*cookText;
 @property(nonatomic,strong)NSMutableArray*cookImageInfoArray;
+@property(nonatomic,strong)NSMutableArray*topicArray;
 
 
 +(Species*)fakeSpecies:(NSInteger)speciesIndex;

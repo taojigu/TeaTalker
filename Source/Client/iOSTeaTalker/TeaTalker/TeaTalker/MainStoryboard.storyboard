@@ -420,9 +420,28 @@
             <point key="canvasLocation" x="62" y="-750"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="Zxp-D3-m4c">
+            <objects>
+                <viewController id="M8Z-u7-hQe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4A7-XF-c8m"/>
+                        <viewControllerLayoutGuide type="bottom" id="pjb-an-uk5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o0y-97-Pf1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AYv-s9-Bte"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eiE-Ro-gsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631" y="-336"/>
+        </scene>
+        <!--Species Detail View Controller-->
         <scene sceneID="0YB-4J-9xZ">
             <objects>
-                <viewController id="bHj-yk-pxl" sceneMemberID="viewController">
+                <viewController id="bHj-yk-pxl" customClass="SpeciesDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BXm-43-Cdh"/>
                         <viewControllerLayoutGuide type="bottom" id="frt-8F-1Ul"/>
@@ -454,7 +473,7 @@
                                     <constraint firstAttribute="height" constant="267" id="yHK-VU-reQ"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="IntroductionCellIdentifer" rowHeight="60" id="OYl-w1-S8w" customClass="TextTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="0.0" reuseIdentifier="IntroductionCellIdentifer" rowHeight="60" id="OYl-w1-S8w" customClass="TextTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="304" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OYl-w1-S8w" id="pfM-Z2-lM4">
@@ -501,8 +520,15 @@
                                             <constraint firstItem="CH1-Es-7gn" firstAttribute="leading" secondItem="SEI-6y-2By" secondAttribute="leading" constant="54" id="8c9-UO-6MU"/>
                                             <constraint firstItem="CH1-Es-7gn" firstAttribute="top" secondItem="SEI-6y-2By" secondAttribute="top" constant="11" id="jQq-en-5Gz"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="M8Z-u7-hQe" kind="push" id="I9h-58-Cg5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bHj-yk-pxl" id="0Ec-Tc-gn3"/>
+                                    <outlet property="delegate" destination="bHj-yk-pxl" id="ZJq-yP-1ZT"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

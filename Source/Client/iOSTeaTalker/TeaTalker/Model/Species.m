@@ -17,6 +17,7 @@
 @synthesize imageInfoArray;
 @synthesize cookText;
 @synthesize cookImageInfoArray;
+@synthesize topicArray;
 
 
 

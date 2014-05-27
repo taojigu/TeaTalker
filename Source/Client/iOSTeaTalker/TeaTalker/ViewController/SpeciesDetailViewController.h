@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Species;
 
-@interface SpeciesDetailViewController : UIViewController
+@interface SpeciesDetailViewController : UIViewController{
+    
+}
+
+@property(strong,nonatomic)Species*species;
 
 @end
