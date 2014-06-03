@@ -13,5 +13,5 @@
 }
 
 +(NSString*)teaCategoryURLString;
-
++(NSString*)topicUrlString:(NSString*)speciesId pageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize;
 @end

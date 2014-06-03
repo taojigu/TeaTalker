@@ -8,13 +8,17 @@
 
 #import "SpeciesDetailViewController.h"
 #import "Species.h"
+#import "ImageInfo.h"
+#import "AsiHttpRequest.h"
+#import "RequestUrlStringUtility.h"
 
 
 #define IntroductionSection 0
 #define TopicSection 1
 
-@interface SpeciesDetailViewController ()
+@interface SpeciesDetailViewController ()<ASIHTTPRequestDelegate>
 
+@property(nonatomic,strong)ElementsContainer*topicContainer;
 @end
 
 @implementation SpeciesDetailViewController
@@ -34,10 +38,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.hidesBottomBarWhenPushed=YES;
-    self.tabBarController.tabBar.hidden=YES;
+    //self.hidesBottomBarWhenPushed=YES;
+    //self.tabBarController.tabBar.hidden=YES;
     
-    [self addTapRecognizer];
+    cookTextView.text=self.species.introduction;
+    ImageInfo*iif=[self.species.imageInfoArray objectAtIndex:0];
+    
+    headerImageView.image=iif.image;
+    
+    [self requestTopicData:0];
+    
+    //[self addTapRecognizer];
 
 }
 
@@ -51,11 +62,11 @@
 -(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden=YES;
+    //self.navigationController.navigationBarHidden=YES;
     
 }
 -(void)viewWillDisappear:(BOOL)animated{
-    self.navigationController.navigationBarHidden=NO;
+    //self.navigationController.navigationBarHidden=NO;
 }
 
 /*
@@ -97,7 +108,7 @@
     return 0;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 2;
 }
 
 #pragma mark -- selector messages
@@ -113,11 +124,32 @@
     }
 }
 
+
+
 #pragma mark -- private messages
 
 -(void)addTapRecognizer{
     UITapGestureRecognizer*tapRecg=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewTapped:)];
     [self.view addGestureRecognizer:tapRecg];
 }
+-(void)requestTopicData:(NSInteger)pageIndex{
+    NSString*urlString=[RequestUrlStringUtility topicUrlString:self.species.speciesId pageIndex:pageIndex pageSize:12];
+    ASIHTTPRequest*request=[ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlString]];
+    request.delegate=self;
+    [request startAsynchronous];
+}
 
+#pragma mark -- AsiHttpRequestDelegate messages
+
+-(void)requestFinished:(ASIHTTPRequest *)request{
+    NSData*data=[request responseData];
+    TopicContainerParser*parser=[[TopicContainerParser alloc]init];
+    ElementsContainer*topicPage=[parser parse:data];
+    [self.topicContainer.elementArray addObjectsFromArray:topicPage.elementArray];
+    
+    
+}
+-(void)requestFailed:(ASIHTTPRequest *)request{
+    NSLog(@"topic request failed");
+}
 @end

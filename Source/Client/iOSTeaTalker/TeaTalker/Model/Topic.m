@@ -10,4 +10,13 @@
 
 @implementation Topic
 
+
++(Topic*)fakeTopic:(NSInteger)index{
+    Topic*tp=[[Topic alloc]init];
+    tp.title=[NSString stringWithFormat:@"Topic %li Title",(long)index];
+    tp.text=@""
+    return tp;
+    
+}
+
 @end

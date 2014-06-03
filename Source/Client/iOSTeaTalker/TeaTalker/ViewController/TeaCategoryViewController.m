@@ -10,6 +10,7 @@
 #import "TeaCategory.h"
 #import "Species.h"
 #import "ImageInfo.h"
+#import "SpeciesDetailViewController.h"
 
 #define ImageViewTag 101
 #define NameLabelTag 102
@@ -126,7 +127,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -134,7 +135,11 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSIndexPath*indexPath=[self.tableView indexPathForSelectedRow];
+    Species*spc=[self.teaCategory.species.elementArray objectAtIndex:indexPath.row];
+    SpeciesDetailViewController*sdvc=(SpeciesDetailViewController*)[segue destinationViewController];
+    sdvc.species=spc;
 }
-*/
+
 
 @end

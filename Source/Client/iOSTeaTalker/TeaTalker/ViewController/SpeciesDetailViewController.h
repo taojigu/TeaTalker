@@ -10,6 +10,11 @@
 @class Species;
 
 @interface SpeciesDetailViewController : UIViewController{
+    @private
+    
+    IBOutlet UITextView*cookTextView;
+    IBOutlet UIImageView*headerImageView;
+
     
 }
 

@@ -13,4 +13,8 @@
 +(NSString*)teaCategoryURLString{
     return @"http://www.163.com";
 }
+
++(NSString*)topicUrlString:(NSString*)speciesId pageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize{
+    return  @"http://www.baidu.com";
+}
 @end
