@@ -12,7 +12,7 @@
 @interface SpeciesDetailViewController : UIViewController{
     @private
     
-    IBOutlet UITextView*cookTextView;
+    IBOutlet UITextView*introductionTextView;
     IBOutlet UIImageView*headerImageView;
 
     

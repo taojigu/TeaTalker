@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Topic : NSObject
+@class ImageInfo;
+@interface Topic : NSObject{
+    
+}
+
+@property(nonatomic,strong)NSString*title;
+@property(nonatomic,strong)NSString*text;
+@property(nonatomic,strong)ImageInfo*titleImageInfo;
+@property(nonatomic,strong)NSString*author;
+@property(nonatomic,strong)NSString*urlString;
+
++(Topic*)fakeTopic:(NSInteger)index;
 
 @end

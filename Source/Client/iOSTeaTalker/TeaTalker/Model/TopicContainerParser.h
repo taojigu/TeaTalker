@@ -13,5 +13,5 @@
 @interface TopicContainerParser : NSObject
 
 
--(ElementsContainer*)parser:(NSData*)data;
+-(ElementsContainer*)parse:(NSData*)data;
 @end

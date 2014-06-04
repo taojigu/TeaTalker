@@ -455,7 +455,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Cook Text" translatesAutoresizingMaskIntoConstraints="NO" id="lkQ-Iy-8hz">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Introdcution" translatesAutoresizingMaskIntoConstraints="NO" id="lkQ-Iy-8hz">
                                 <rect key="frame" x="0.0" y="183" width="320" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
@@ -467,14 +467,14 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="IntroductionCellIdentifer" rowHeight="43" id="VmN-Vy-ryr">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="CookCellIdentifer" rowHeight="43" id="VmN-Vy-ryr">
                                         <rect key="frame" x="0.0" y="22" width="320" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VmN-Vy-ryr" id="n79-sc-Qgn">
                                             <rect key="frame" x="0.0" y="0.0" width="253" height="42"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introduction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhQ-gp-D4U">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cook Skills" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhQ-gp-D4U">
                                                     <rect key="frame" x="42" y="11" width="113" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -483,6 +483,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="2ye-2d-KyR" kind="push" id="kNN-3j-Klc"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCellIdentifer" id="GKX-B5-wo2">
                                         <rect key="frame" x="0.0" y="65" width="320" height="43"/>
@@ -511,13 +514,32 @@
                     </view>
                     <navigationItem key="navigationItem" id="ojL-82-VU3"/>
                     <connections>
-                        <outlet property="cookTextView" destination="lkQ-Iy-8hz" id="U5k-M1-B7F"/>
                         <outlet property="headerImageView" destination="kNq-Mx-Euz" id="Ig1-oD-bl1"/>
+                        <outlet property="introductionTextView" destination="lkQ-Iy-8hz" id="OR2-SP-vXP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGj-P5-2Us" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="472" y="-1149"/>
+        </scene>
+        <!--Cook Skill View Controller-->
+        <scene sceneID="HTh-7e-5Cv">
+            <objects>
+                <viewController id="2ye-2d-KyR" customClass="CookSkillViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Ug-qe-KZX"/>
+                        <viewControllerLayoutGuide type="bottom" id="4dI-Y6-Pxd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="keM-YU-yFu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WEW-Ol-Bkc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qip-ey-cxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871" y="-1692"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wMT-gd-D51">

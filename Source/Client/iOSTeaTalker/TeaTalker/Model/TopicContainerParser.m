@@ -11,7 +11,7 @@
 
 @implementation TopicContainerParser
 
--(ElementsContainer*)parser:(NSData*)data{
+-(ElementsContainer*)parse:(NSData*)data{
     
     ElementsContainer*result=[[ElementsContainer alloc]init];
     result.pageIndex=0;

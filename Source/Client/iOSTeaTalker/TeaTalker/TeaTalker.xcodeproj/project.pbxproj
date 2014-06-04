@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9D2B9093193DCB9F00B3F164 /* TopicContainerParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B9092193DCB9F00B3F164 /* TopicContainerParser.m */; };
+		9D2B9096193EF34A00B3F164 /* CookSkillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B9095193EF34A00B3F164 /* CookSkillViewController.m */; };
+		9D2B9099193EF4CA00B3F164 /* ContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B9098193EF4CA00B3F164 /* ContentObject.m */; };
 		9D8E8BB61918C26500922416 /* SpeciesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */; };
 		9D8E8BB91918CBBA00922416 /* Species.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB81918CBBA00922416 /* Species.m */; };
 		9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */; };
@@ -84,6 +86,10 @@
 /* Begin PBXFileReference section */
 		9D2B9091193DCB9F00B3F164 /* TopicContainerParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicContainerParser.h; path = Model/TopicContainerParser.h; sourceTree = "<group>"; };
 		9D2B9092193DCB9F00B3F164 /* TopicContainerParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopicContainerParser.m; path = Model/TopicContainerParser.m; sourceTree = "<group>"; };
+		9D2B9094193EF34A00B3F164 /* CookSkillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CookSkillViewController.h; path = ViewController/CookSkillViewController.h; sourceTree = "<group>"; };
+		9D2B9095193EF34A00B3F164 /* CookSkillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CookSkillViewController.m; path = ViewController/CookSkillViewController.m; sourceTree = "<group>"; };
+		9D2B9097193EF4CA00B3F164 /* ContentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentObject.h; path = Model/ContentObject.h; sourceTree = "<group>"; };
+		9D2B9098193EF4CA00B3F164 /* ContentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentObject.m; path = Model/ContentObject.m; sourceTree = "<group>"; };
 		9D8E8BB41918C26500922416 /* SpeciesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeciesDetailViewController.h; path = ViewController/SpeciesDetailViewController.h; sourceTree = "<group>"; };
 		9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeciesDetailViewController.m; path = ViewController/SpeciesDetailViewController.m; sourceTree = "<group>"; };
 		9D8E8BB71918CBBA00922416 /* Species.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Species.h; path = Model/Species.h; sourceTree = "<group>"; };
@@ -246,6 +252,8 @@
 				9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */,
 				9D8E8BCB1921006500922416 /* CategoryIntroductionViewController.h */,
 				9D8E8BCC1921006500922416 /* CategoryIntroductionViewController.m */,
+				9D2B9094193EF34A00B3F164 /* CookSkillViewController.h */,
+				9D2B9095193EF34A00B3F164 /* CookSkillViewController.m */,
 			);
 			name = TeaViewController;
 			sourceTree = "<group>";
@@ -392,6 +400,8 @@
 				CEFD930A18AB563700CD3F47 /* Topic.m */,
 				9D8E8BB71918CBBA00922416 /* Species.h */,
 				9D8E8BB81918CBBA00922416 /* Species.m */,
+				9D2B9097193EF4CA00B3F164 /* ContentObject.h */,
+				9D2B9098193EF4CA00B3F164 /* ContentObject.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -663,6 +673,8 @@
 				CEFD930818AB55D200CD3F47 /* TeaCategory.m in Sources */,
 				CEFD930B18AB563700CD3F47 /* Topic.m in Sources */,
 				CEFD931018AB56A600CD3F47 /* ElementsContainer.m in Sources */,
+				9D2B9099193EF4CA00B3F164 /* ContentObject.m in Sources */,
+				9D2B9096193EF34A00B3F164 /* CookSkillViewController.m in Sources */,
 				CEFD931118AB56A600CD3F47 /* ImageInfo.m in Sources */,
 				CEFD931518AB60CC00CD3F47 /* TeaCategoryTableViewController.m in Sources */,
 				CEFD935118AB684F00CD3F47 /* ASIAuthenticationDialog.m in Sources */,

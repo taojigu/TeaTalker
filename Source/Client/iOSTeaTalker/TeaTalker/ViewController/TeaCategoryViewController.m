@@ -138,6 +138,7 @@
     NSIndexPath*indexPath=[self.tableView indexPathForSelectedRow];
     Species*spc=[self.teaCategory.species.elementArray objectAtIndex:indexPath.row];
     SpeciesDetailViewController*sdvc=(SpeciesDetailViewController*)[segue destinationViewController];
+    //sdvc.hidesBottomBarWhenPushed=YES;
     sdvc.species=spc;
 }
 

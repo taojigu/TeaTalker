@@ -11,9 +11,10 @@
 #import "ImageInfo.h"
 #import "AsiHttpRequest.h"
 #import "RequestUrlStringUtility.h"
+#import "TopicContainerParser.h"
 
 
-#define IntroductionSection 0
+#define CookSection 0
 #define TopicSection 1
 
 @interface SpeciesDetailViewController ()<ASIHTTPRequestDelegate>
@@ -41,14 +42,14 @@
     //self.hidesBottomBarWhenPushed=YES;
     //self.tabBarController.tabBar.hidden=YES;
     
-    cookTextView.text=self.species.introduction;
+    introductionTextView.text=self.species.introduction;
     ImageInfo*iif=[self.species.imageInfoArray objectAtIndex:0];
     
     headerImageView.image=iif.image;
     
     [self requestTopicData:0];
     
-    //[self addTapRecognizer];
+    [self addTapRecognizer];
 
 }
 
@@ -85,8 +86,8 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *CellIdentifier = @"CellIdentifer";
-    if (IntroductionSection==indexPath.section) {
-        CellIdentifier=@"IntroductionCellIdentifer";
+    if (CookSection==indexPath.section) {
+        CellIdentifier=@"CookCellIdentifer";
     }
    
     if (TopicSection==indexPath.section) {
@@ -99,7 +100,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (IntroductionSection==section) {
+    if (CookSection==section) {
         return 1;
     }
     if (TopicSection==section) {
