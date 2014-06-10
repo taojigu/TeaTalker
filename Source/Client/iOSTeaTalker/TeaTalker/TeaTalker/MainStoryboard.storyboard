@@ -516,6 +516,7 @@
                     <connections>
                         <outlet property="headerImageView" destination="kNq-Mx-Euz" id="Ig1-oD-bl1"/>
                         <outlet property="introductionTextView" destination="lkQ-Iy-8hz" id="OR2-SP-vXP"/>
+                        <outlet property="tableView" destination="pBf-kf-ONI" id="p8E-A3-2pc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGj-P5-2Us" userLabel="First Responder" sceneMemberID="firstResponder"/>

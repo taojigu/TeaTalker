@@ -17,7 +17,7 @@
 #define CookSection 0
 #define TopicSection 1
 
-@interface SpeciesDetailViewController ()<ASIHTTPRequestDelegate>
+@interface SpeciesDetailViewController ()<ASIHTTPRequestDelegate,UITableViewDelegate>
 
 @property(nonatomic,strong)ElementsContainer*topicContainer;
 @end
@@ -83,7 +83,7 @@
 
 #pragma mark -- UITableView DataSource and Delegate
 
--(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell*)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *CellIdentifier = @"CellIdentifer";
     if (CookSection==indexPath.section) {
@@ -94,7 +94,7 @@
         CellIdentifier=@"TopicCellIdentifer";
     }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     return cell;
 
 }
@@ -112,9 +112,21 @@
     return 2;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+
 #pragma mark -- selector messages
 
 -(void)viewTapped:(UIGestureRecognizer*)recg{
+    
+    CGPoint touchPoint=[recg locationInView:self.view];
+    if (CGRectContainsPoint(tableView.frame, touchPoint)) {
+        recg.cancelsTouchesInView=YES;
+        
+        return;
+    }
     if (self.navigationController.navigationBarHidden) {
         self.navigationController.navigationBarHidden=NO;
         self.tabBarController.tabBar.hidden=NO;
