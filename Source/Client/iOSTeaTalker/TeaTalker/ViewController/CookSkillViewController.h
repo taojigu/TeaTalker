@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CookSkillViewController : UIViewController
+@class Topic;
+@interface CookSkillViewController : UIViewController{
+
+    @private
+    IBOutlet UIScrollView*scrollView;
+}
+
+@property(nonatomic,strong)NSArray*cookImageInfoArray;
+@property(nonatomic,strong)NSString*cookIntroduction;
+
+
 
 @end

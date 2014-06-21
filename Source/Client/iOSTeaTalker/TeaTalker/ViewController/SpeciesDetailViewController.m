@@ -12,6 +12,8 @@
 #import "AsiHttpRequest.h"
 #import "RequestUrlStringUtility.h"
 #import "TopicContainerParser.h"
+#import "CookSkillViewController.h"
+#import "TopicDetailViewController.h"
 
 
 #define CookSection 0
@@ -49,7 +51,7 @@
     
     [self requestTopicData:0];
     
-    [self addTapRecognizer];
+    //[self addTapRecognizer];
 
 }
 
@@ -112,9 +114,7 @@
     return 2;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
+
 
 
 #pragma mark -- selector messages
@@ -137,6 +137,15 @@
     }
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    UIViewController*dstCntrl=[segue destinationViewController];
+    if ([dstCntrl isKindOfClass:[CookSkillViewController class]]) {
+        CookSkillViewController*ckvc=(CookSkillViewController*)dstCntrl;
+        ckvc.cookImageInfoArray=self.species.cookImageInfoArray;
+        ckvc.cookIntroduction=species.cookText;
+        return;
+    }
+}
 
 
 #pragma mark -- private messages

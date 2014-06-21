@@ -129,17 +129,17 @@
             </objects>
             <point key="canvasLocation" x="-554" y="297"/>
         </scene>
-        <!--Feedback View Controller-->
+        <!--Cook Skill View Controller-->
         <scene sceneID="l3d-TZ-Cel">
             <objects>
-                <viewController id="Dra-ls-7or" customClass="FeedbackViewController" sceneMemberID="viewController">
+                <viewController id="Dra-ls-7or" customClass="CookSkillViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DPP-sj-qCe"/>
                         <viewControllerLayoutGuide type="bottom" id="mr6-IV-8Sf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LZ5-C9-TfN">
+                    <view key="view" contentMode="scaleToFill" id="XHP-pB-KK8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="PwF-gd-deF">
