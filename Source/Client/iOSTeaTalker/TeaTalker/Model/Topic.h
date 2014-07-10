@@ -18,6 +18,7 @@
 @property(nonatomic,strong)ImageInfo*titleImageInfo;
 @property(nonatomic,strong)NSString*author;
 @property(nonatomic,strong)NSString*urlString;
+@property(nonatomic,strong)NSString*introduction;
 
 +(Topic*)fakeTopic:(NSInteger)index;
 

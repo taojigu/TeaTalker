@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TextTableViewCell : UITableViewCell
+@interface TextTableViewCell : UITableViewCell{
+    
+}
+
+@property(nonatomic,strong)UILabel*headerLabel;
+@property(nonatomic,strong)UILabel*bodyLabel;
+
++(CGFloat)cellHeightForText:(NSString*)text;
 
 @end

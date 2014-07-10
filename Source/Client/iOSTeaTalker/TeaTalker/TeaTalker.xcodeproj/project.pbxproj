@@ -12,6 +12,8 @@
 		9D2B9099193EF4CA00B3F164 /* ContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B9098193EF4CA00B3F164 /* ContentObject.m */; };
 		9D2B909C1952E33B00B3F164 /* CookTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B909B1952E33B00B3F164 /* CookTip.m */; };
 		9D2B909F1953DCBD00B3F164 /* ImageInfoUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B909E1953DCBD00B3F164 /* ImageInfoUnitView.m */; };
+		9D32BC93196ACF8000C89803 /* SepciesDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC92196ACF8000C89803 /* SepciesDetailTableViewController.m */; };
+		9D32BC96196E926800C89803 /* TopicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC95196E926800C89803 /* TopicWebViewController.m */; };
 		9D8E8BB61918C26500922416 /* SpeciesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */; };
 		9D8E8BB91918CBBA00922416 /* Species.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB81918CBBA00922416 /* Species.m */; };
 		9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */; };
@@ -96,6 +98,10 @@
 		9D2B909B1952E33B00B3F164 /* CookTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CookTip.m; path = Model/CookTip.m; sourceTree = "<group>"; };
 		9D2B909D1953DCBD00B3F164 /* ImageInfoUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageInfoUnitView.h; path = view/view/ImageInfoUnitView.h; sourceTree = "<group>"; };
 		9D2B909E1953DCBD00B3F164 /* ImageInfoUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageInfoUnitView.m; path = view/view/ImageInfoUnitView.m; sourceTree = "<group>"; };
+		9D32BC91196ACF8000C89803 /* SepciesDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SepciesDetailTableViewController.h; path = ViewController/SepciesDetailTableViewController.h; sourceTree = "<group>"; };
+		9D32BC92196ACF8000C89803 /* SepciesDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SepciesDetailTableViewController.m; path = ViewController/SepciesDetailTableViewController.m; sourceTree = "<group>"; };
+		9D32BC94196E926800C89803 /* TopicWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicWebViewController.h; path = ViewController/TopicWebViewController.h; sourceTree = "<group>"; };
+		9D32BC95196E926800C89803 /* TopicWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopicWebViewController.m; path = ViewController/TopicWebViewController.m; sourceTree = "<group>"; };
 		9D8E8BB41918C26500922416 /* SpeciesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeciesDetailViewController.h; path = ViewController/SpeciesDetailViewController.h; sourceTree = "<group>"; };
 		9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeciesDetailViewController.m; path = ViewController/SpeciesDetailViewController.m; sourceTree = "<group>"; };
 		9D8E8BB71918CBBA00922416 /* Species.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Species.h; path = Model/Species.h; sourceTree = "<group>"; };
@@ -260,6 +266,8 @@
 				9D8E8BCC1921006500922416 /* CategoryIntroductionViewController.m */,
 				9D2B9094193EF34A00B3F164 /* CookSkillViewController.h */,
 				9D2B9095193EF34A00B3F164 /* CookSkillViewController.m */,
+				9D32BC91196ACF8000C89803 /* SepciesDetailTableViewController.h */,
+				9D32BC92196ACF8000C89803 /* SepciesDetailTableViewController.m */,
 			);
 			name = TeaViewController;
 			sourceTree = "<group>";
@@ -271,6 +279,8 @@
 				CEE94E8818A9CA24006A24F5 /* TopicTableViewController.m */,
 				9D8E8BC81920FF2B00922416 /* TopicDetailViewController.h */,
 				9D8E8BC91920FF2B00922416 /* TopicDetailViewController.m */,
+				9D32BC94196E926800C89803 /* TopicWebViewController.h */,
+				9D32BC95196E926800C89803 /* TopicWebViewController.m */,
 			);
 			name = TopicViewController;
 			sourceTree = "<group>";
@@ -672,6 +682,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED577AA18A5D3420025C83C /* main.m in Sources */,
+				9D32BC96196E926800C89803 /* TopicWebViewController.m in Sources */,
 				CED577AE18A5D3420025C83C /* AppDelegate.m in Sources */,
 				CEE94E8918A9CA24006A24F5 /* TopicTableViewController.m in Sources */,
 				CEE94E8F18A9D07B006A24F5 /* MoreViewController.m in Sources */,
@@ -695,6 +706,7 @@
 				CEFD935518AB684F00CD3F47 /* ASIFormDataRequest.m in Sources */,
 				CEFD935618AB684F00CD3F47 /* ASIHTTPRequest.m in Sources */,
 				CEFD935718AB684F00CD3F47 /* ASIInputStream.m in Sources */,
+				9D32BC93196ACF8000C89803 /* SepciesDetailTableViewController.m in Sources */,
 				CEFD935818AB684F00CD3F47 /* ASINetworkQueue.m in Sources */,
 				CEFD935918AB684F00CD3F47 /* ASIWebPageRequest.m in Sources */,
 				CEFD935A18AB684F00CD3F47 /* ASICloudFilesCDNRequest.m in Sources */,

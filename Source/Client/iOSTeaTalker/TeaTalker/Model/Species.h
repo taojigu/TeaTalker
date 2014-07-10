@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class ElementsContainer;
 
 @interface Species : NSObject
 
@@ -17,8 +18,7 @@
 @property(nonatomic,strong)NSMutableArray*imageInfoArray;
 @property(nonatomic,strong)NSString*cookText;
 @property(nonatomic,strong)NSMutableArray*cookImageInfoArray;
-@property(nonatomic,strong)NSMutableArray*topicArray;
-
+@property(nonatomic,strong)ElementsContainer*topicContainer;
 
 +(Species*)fakeSpecies:(NSInteger)speciesIndex;
 
