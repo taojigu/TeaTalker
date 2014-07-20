@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    TopicTypeSpecies=0,
+    TopicTypeTeaCategory=1
+} TopicType;
+
 @class ImageInfo;
 @interface Topic : NSObject{
     

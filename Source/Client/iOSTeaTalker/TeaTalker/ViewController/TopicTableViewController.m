@@ -7,12 +7,25 @@
 //
 
 #import "TopicTableViewController.h"
+#import "Species.h"
+#import "TeaCategory.h"
+#import "Topic.h"
+#import "ImageInfo.h"
+#import "TopicContainerParser.h"
 
-@interface TopicTableViewController ()
+#import "ElementsContainer.h"
+
+@interface TopicTableViewController ()<NSURLSessionDelegate>
+
+-(IBAction)loadMoreTopics:(id)sender;
 
 @end
 
 @implementation TopicTableViewController
+
+@synthesize topicType;
+@synthesize topicDataManager;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,11 +40,9 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    CGFloat height=CGRectGetHeight(self.tableView.tableHeaderView.frame);
+    self.tableView.contentOffset=CGPointMake(0, height);
  
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,7 +60,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    ElementsContainer*topicContainer=self.topicDataManager.topicElementContainer;
+    return topicContainer.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -58,6 +70,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    ElementsContainer*topicContainer=[self.topicDataManager topicElementContainer];
+    Topic*topic=[topicContainer.elementArray objectAtIndex:indexPath.row];
+    cell.imageView.image=topic.titleImageInfo.image;
+    cell.textLabel.text=topic.title;
     
     return cell;
 }
@@ -112,6 +128,39 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+
+#pragma mark -- action messages
+
+-(IBAction)loadMoreTopics:(id)sender{
+    ElementsContainer*topicContainer=[self.topicDataManager topicElementContainer];
+    
+    [self requestTopicPage:topicContainer.pageIndex+1];
+}
+
+#pragma mark -- private mesages
+-(void)requestTopicPage:(NSInteger)pageIndex{
+    NSString*pageRequestUrlString=[self.topicDataManager pageRequestUrlString:pageIndex];
+    NSURLSessionConfiguration*config=[NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession*session=[NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSessionDataTask*task=[session dataTaskWithHTTPGetRequest:[NSURL URLWithString:pageRequestUrlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (nil!=error) {
+            NSLog(@"The page failed %@",[error localizedFailureReason]);
+            return ;
+        }
+        [self processTopicPage:data];
+        
+    }];
+    [task resume];
+}
+-(void)processTopicPage:(NSData*)data{
+    TopicContainerParser*parser=[[TopicContainerParser alloc]init];
+    ElementsContainer*resultContainer=[parser parse:data];
+    ElementsContainer*topicContainer=[self.topicDataManager topicElementContainer];
+    topicContainer.pageIndex++;
+    topicContainer.count+=[resultContainer.elementArray count];
+    [topicContainer.elementArray addObjectsFromArray:resultContainer.elementArray];
 }
 
 @end

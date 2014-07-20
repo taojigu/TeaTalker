@@ -15,6 +15,8 @@
     IBOutlet UITextView*introductionTextView;
     IBOutlet UIImageView*headerImageView;
     IBOutlet UITableView* tableView;
+    
+    IBOutlet UINavigationItem*rightButton;
 
     
 }

@@ -13,15 +13,22 @@
 #import "RequestUrlStringUtility.h"
 #import "TopicContainerParser.h"
 #import "CookSkillViewController.h"
-#import "TopicDetailViewController.h"
+//#import "TopicDetailViewController.h"
 
 
 #define CookSection 0
 #define TopicSection 1
 
-@interface SpeciesDetailViewController ()<ASIHTTPRequestDelegate,UITableViewDelegate>
+@interface SpeciesDetailViewController ()<ASIHTTPRequestDelegate,UITableViewDelegate>{
+    
+    @private
+    IBOutlet UIBarButtonItem* topicButton;
+    
+}
 
 @property(nonatomic,strong)ElementsContainer*topicContainer;
+
+-(IBAction)rightButtonClicked:(id)sender;
 @end
 
 @implementation SpeciesDetailViewController
@@ -37,12 +44,24 @@
     return self;
 }
 
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        // Custom initialization
+        self.navigationItem.rightBarButtonItem.action=@selector(rightButtonClicked:);
+    }
+    return self;
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //self.hidesBottomBarWhenPushed=YES;
     //self.tabBarController.tabBar.hidden=YES;
+    
     
     introductionTextView.text=self.species.introduction;
     ImageInfo*iif=[self.species.imageInfoArray objectAtIndex:0];
@@ -159,6 +178,9 @@
     ASIHTTPRequest*request=[ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlString]];
     request.delegate=self;
     [request startAsynchronous];
+}
+-(IBAction)rightButtonClicked:(id)sender{
+    
 }
 
 #pragma mark -- AsiHttpRequestDelegate messages

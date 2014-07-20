@@ -13,6 +13,7 @@
 #import "Topic.h"
 #import "ImageInfo.h"
 #import "TopicWebViewController.h"
+#import "TopicTableViewController.h"
 
 #define SpeciesSection 0
 #define IntroductionRow 0
@@ -20,13 +21,18 @@
 
 #define TopicSection 1
 
-#define IntroductionCellIdentifer @"IntroductionCell"
-#define CookSkillCellIdentifer @"CookSkillCell"
+#define TextTableViewCellIdentifer @"TextTableViewCell"
+#define MoreCellIdentifer @"MoreTopicCell"
+
 #define TopicCellIdentifer @"TopicCell"
 
 #define TopicCellHeight 60
 
-@interface SepciesDetailTableViewController ()
+@interface SepciesDetailTableViewController (){
+    
+}
+
+
 
 @end
 
@@ -85,7 +91,7 @@
         return 2;
     }
     if (TopicSection==section) {
-        return 1;
+        return [self.species.topicContainer.elementArray count]+1;
     }
     
     return 0;
@@ -124,6 +130,16 @@
     NSAssert(NO, @"Invalidate height for the row ");
     return 0;
     
+}
+
+#pragma mark -- tableView delegate message
+
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (TopicSection==section) {
+        NSString*title=[NSString stringWithFormat:@"%@的话题",self.species.name];
+        return title;
+    }
+    return nil;
 }
 
 
@@ -180,10 +196,18 @@
         NSAssert(TopicSection==indexPath.section, @"Not invalidate topic section");
         TopicWebViewController*twvc=(TopicWebViewController*)dstvc;
         twvc.topic=[self.species.topicContainer.elementArray objectAtIndex:indexPath.row];
+        return;
+        
+    }
+    if ([dstvc class]==[TopicTableViewController class]) {
+        TopicTableViewController*ttvc=(TopicTableViewController*)dstvc;
         
     }
     
 }
+
+#pragma mark -- selector message
+
 
 
 #pragma mark -- private messages
@@ -191,7 +215,7 @@
 -(UITableViewCell*)speciesSectionCell:(UITableView*)tableView indexPath:(NSIndexPath*)indexPath{
     
     if (IntroductionRow==indexPath.row) {
-       TextTableViewCell*tcell=(TextTableViewCell*)[tableView dequeueReusableCellWithIdentifier:IntroductionCellIdentifer];
+       TextTableViewCell*tcell=(TextTableViewCell*)[tableView dequeueReusableCellWithIdentifier:TextTableViewCellIdentifer];
         tcell.headerLabel.text=@"简介";
         //tcell.headerLabel.backgroundColor=[UIColor yellowColor];
         tcell.bodyLabel.text=self.species.introduction;
@@ -200,25 +224,33 @@
         return tcell;
     }
     if (CookSkillRow==indexPath.row) {
-        TextTableViewCell*cookCell=(TextTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CookSkillCellIdentifer];
+        TextTableViewCell*cookCell=(TextTableViewCell*)[tableView dequeueReusableCellWithIdentifier:TextTableViewCellIdentifer];
         cookCell.headerLabel.text=@"泡茶";
         cookCell.bodyLabel.text=self.species.cookText;
+        cookCell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
         return cookCell;
     }
     NSAssert(NO, @"Species Cell should not be nil");
     return nil;
 }
 -(UITableViewCell*)topicCell:(UITableView*)tableView indexPath:(NSIndexPath*)indexPath{
-
-    Topic*tp=[self.species.topicContainer.elementArray objectAtIndex:indexPath.row];
-    UITableViewCell*cell=[tableView dequeueReusableCellWithIdentifier:TopicCellIdentifer];
     
-    cell.imageView.image=tp.titleImageInfo.image;
-    cell.textLabel.text=tp.title;
-    cell.detailTextLabel.text=tp.introduction;
+    if (indexPath.row==[self.species.topicContainer.elementArray count]) {
+        UITableViewCell*moreCell=[tableView dequeueReusableCellWithIdentifier:MoreCellIdentifer];
+        return moreCell;
+    }
+    else{
+
+        Topic*tp=[self.species.topicContainer.elementArray objectAtIndex:indexPath.row];
+        UITableViewCell*cell=[tableView dequeueReusableCellWithIdentifier:TopicCellIdentifer];
+        cell.imageView.image=tp.titleImageInfo.image;
+        cell.textLabel.text=tp.title;
+        cell.detailTextLabel.text=tp.introduction;
+        return cell;
+    }
     
    
-    return cell;
+
 }
 
 @end
