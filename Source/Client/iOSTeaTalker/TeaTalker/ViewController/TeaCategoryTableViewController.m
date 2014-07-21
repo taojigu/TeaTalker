@@ -7,7 +7,7 @@
 //
 
 #import "TeaCategoryTableViewController.h"
-#import "ASIHTTPRequest.h"
+//#import "ASIHTTPRequest.h"
 #import "TeaCategory.h"
 #import "RequestUrlStringUtility.h"
 #import "TeaCategoryArrayParser.h"
@@ -18,7 +18,7 @@
 
 
 
-@interface TeaCategoryTableViewController ()<ASIHTTPRequestDelegate>
+@interface TeaCategoryTableViewController ()
 
 -(void)startDownloadTeaCategory;
 
@@ -150,24 +150,24 @@
 }
 
 
-#pragma mark AsiHttpRequestDelegate messages
-
--(void)requestFinished:(ASIHTTPRequest *)request{
-    TeaCategoryArrayParser*parser=[[TeaCategoryArrayParser alloc]init];
-    NSMutableArray*resultArray=[parser parse:request.responseData];
-    self.teaCategoryArray=resultArray;
-    [self.tableView reloadData];
-}
--(void)requestFailed:(ASIHTTPRequest *)request{
-    NSLog(@"Request Failed");
-}
 
 #pragma mark private messages
 
 -(void)startDownloadTeaCategory{
     NSString*urlString=[RequestUrlStringUtility teaCategoryURLString];
-    ASIHTTPRequest*request=[ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlString]];
-    request.delegate=self;
-    [request startAsynchronous];
+    NSURLSessionConfiguration*config=[NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession*session=[NSURLSession sessionWithConfiguration:config];
+    NSURLSessionTask*task=[session dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (nil!=error) {
+             NSLog(@"Request Failed:%@",urlString);
+            return ;
+        }
+        TeaCategoryArrayParser*parser=[[TeaCategoryArrayParser alloc]init];
+        NSMutableArray*resultArray=[parser parse:data];
+        self.teaCategoryArray=resultArray;
+        [self.tableView reloadData];
+        return ;
+    }];
+    [task resume];
 }
 @end

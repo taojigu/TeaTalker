@@ -9,17 +9,18 @@
 #import "SpeciesDetailViewController.h"
 #import "Species.h"
 #import "ImageInfo.h"
-#import "AsiHttpRequest.h"
+
 #import "RequestUrlStringUtility.h"
 #import "TopicContainerParser.h"
 #import "CookSkillViewController.h"
-//#import "TopicDetailViewController.h"
+
+
 
 
 #define CookSection 0
 #define TopicSection 1
 
-@interface SpeciesDetailViewController ()<ASIHTTPRequestDelegate,UITableViewDelegate>{
+@interface SpeciesDetailViewController ()<NSURLSessionDelegate,UITableViewDelegate>{
     
     @private
     IBOutlet UIBarButtonItem* topicButton;
@@ -174,26 +175,29 @@
     [self.view addGestureRecognizer:tapRecg];
 }
 -(void)requestTopicData:(NSInteger)pageIndex{
+    
     NSString*urlString=[RequestUrlStringUtility topicUrlString:self.species.speciesId pageIndex:pageIndex pageSize:12];
-    ASIHTTPRequest*request=[ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlString]];
-    request.delegate=self;
-    [request startAsynchronous];
+    
+    NSURLSessionConfiguration*config=[NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    NSURLSession*session=[NSURLSession sessionWithConfiguration:config];
+    NSURLSessionTask*task=[session dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (nil!=error) {
+             NSLog(@"topic request failed");
+            return ;
+        }
+       
+        TopicContainerParser*parser=[[TopicContainerParser alloc]init];
+        ElementsContainer*topicPage=[parser parse:data];
+        [self.topicContainer.elementArray addObjectsFromArray:topicPage.elementArray];
+        return ;
+    }];
+    
+    [task resume];
 }
 -(IBAction)rightButtonClicked:(id)sender{
     
 }
 
-#pragma mark -- AsiHttpRequestDelegate messages
 
--(void)requestFinished:(ASIHTTPRequest *)request{
-    NSData*data=[request responseData];
-    TopicContainerParser*parser=[[TopicContainerParser alloc]init];
-    ElementsContainer*topicPage=[parser parse:data];
-    [self.topicContainer.elementArray addObjectsFromArray:topicPage.elementArray];
-    
-    
-}
--(void)requestFailed:(ASIHTTPRequest *)request{
-    NSLog(@"topic request failed");
-}
 @end
