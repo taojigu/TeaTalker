@@ -15,6 +15,7 @@
 
 #import "ElementsContainer.h"
 
+#import "TopicWebViewController.h"
 @interface TopicTableViewController ()<NSURLSessionDelegate>
 
 -(IBAction)loadMoreTopics:(id)sender;
@@ -39,6 +40,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self requestTopicPage:0];
 
     CGFloat height=CGRectGetHeight(self.tableView.tableHeaderView.frame);
     self.tableView.contentOffset=CGPointMake(0, height);
@@ -74,6 +76,7 @@
     Topic*topic=[topicContainer.elementArray objectAtIndex:indexPath.row];
     cell.imageView.image=topic.titleImageInfo.image;
     cell.textLabel.text=topic.title;
+    cell.detailTextLabel.text=topic.introduction;
     
     return cell;
 }
@@ -117,13 +120,26 @@
 }
 */
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    UIViewController*dstvc=(UIViewController*)segue.destinationViewController;
+    if ([dstvc class]==[TopicWebViewController class]) {
+        
+        NSIndexPath*indexPath=[self.tableView indexPathForSelectedRow];
+        ElementsContainer*topicContainer=[self.topicDataManager topicElementContainer];;
+        Topic*tp=[topicContainer.elementArray objectAtIndex:indexPath.row];
+        
+        TopicWebViewController*twvc=(TopicWebViewController*)dstvc;
+        twvc.topic=tp;
+    }
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
     /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+      *detailViewController = [[ alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
@@ -144,12 +160,13 @@
     NSString*pageRequestUrlString=[self.topicDataManager pageRequestUrlString:pageIndex];
     NSURLSessionConfiguration*config=[NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession*session=[NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
-    NSURLSessionDataTask*task=[session dataTaskWithHTTPGetRequest:[NSURL URLWithString:pageRequestUrlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSURLSessionDataTask*task=[session dataTaskWithURL:[NSURL URLWithString:pageRequestUrlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (nil!=error) {
             NSLog(@"The page failed %@",[error localizedFailureReason]);
             return ;
         }
         [self processTopicPage:data];
+        [self.tableView reloadData];
         
     }];
     [task resume];

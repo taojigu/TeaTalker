@@ -12,11 +12,19 @@
 
 @synthesize topicElementContainer;
 
+-(id)init{
+    self=[super init];
+    if (nil!=self) {
+        self.topicElementContainer=[[ElementsContainer alloc]init];
+    }
+    return self;
+}
+
 -(NSString*)pageRequestUrlString:(NSInteger)pageIndex{
-    return @"www.163.com";
+    return @"http://www.163.com";
 }
 -(NSString*)pageRequestUrlString:(NSInteger)pageIndex pageSize:(NSInteger)pageSize{
-    return @"www.baidu.com";
+    return @"http://www.baidu.com";
 }
 
 

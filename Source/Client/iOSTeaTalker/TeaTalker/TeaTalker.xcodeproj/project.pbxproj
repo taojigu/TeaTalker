@@ -19,6 +19,9 @@
 		9D8E8BB91918CBBA00922416 /* Species.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB81918CBBA00922416 /* Species.m */; };
 		9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */; };
 		9D8E8BCD1921006500922416 /* CategoryIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BCC1921006500922416 /* CategoryIntroductionViewController.m */; };
+		9DB96552197BE3BF00F5DCFE /* ChromeProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB9654E197BE3BF00F5DCFE /* ChromeProgressBar.m */; };
+		9DB96553197BE3BF00F5DCFE /* IMTWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB96551197BE3BF00F5DCFE /* IMTWebView.m */; };
+		9DB96555197BE4A000F5DCFE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB96554197BE4A000F5DCFE /* QuartzCore.framework */; };
 		CED5779E18A5D3420025C83C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED5779D18A5D3420025C83C /* UIKit.framework */; };
 		CED577A018A5D3420025C83C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED5779F18A5D3420025C83C /* Foundation.framework */; };
 		CED577A218A5D3420025C83C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED577A118A5D3420025C83C /* CoreGraphics.framework */; };
@@ -114,6 +117,11 @@
 		9D8E8BC2191CCC5400922416 /* ResourceConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourceConfigure.h; path = Model/Config/ResourceConfigure.h; sourceTree = "<group>"; };
 		9D8E8BCB1921006500922416 /* CategoryIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryIntroductionViewController.h; path = ViewController/CategoryIntroductionViewController.h; sourceTree = "<group>"; };
 		9D8E8BCC1921006500922416 /* CategoryIntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryIntroductionViewController.m; path = ViewController/CategoryIntroductionViewController.m; sourceTree = "<group>"; };
+		9DB9654D197BE3BF00F5DCFE /* ChromeProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromeProgressBar.h; sourceTree = "<group>"; };
+		9DB9654E197BE3BF00F5DCFE /* ChromeProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromeProgressBar.m; sourceTree = "<group>"; };
+		9DB96550197BE3BF00F5DCFE /* IMTWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTWebView.h; sourceTree = "<group>"; };
+		9DB96551197BE3BF00F5DCFE /* IMTWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTWebView.m; sourceTree = "<group>"; };
+		9DB96554197BE4A000F5DCFE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CED5779A18A5D3420025C83C /* TeaTalker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeaTalker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED5779D18A5D3420025C83C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CED5779F18A5D3420025C83C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -222,6 +230,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DB96555197BE4A000F5DCFE /* QuartzCore.framework in Frameworks */,
+				CED577A218A5D3420025C83C /* CoreGraphics.framework in Frameworks */,
 				CEFD937318AB6B1400CD3F47 /* libxml2.dylib in Frameworks */,
 				CEFD937118AB6B0E00CD3F47 /* libz.dylib in Frameworks */,
 				CEFD936D18AB6AEC00CD3F47 /* MobileCoreServices.framework in Frameworks */,
@@ -229,7 +239,6 @@
 				CEFD936918AB6ACD00CD3F47 /* CFNetwork.framework in Frameworks */,
 				CED5779E18A5D3420025C83C /* UIKit.framework in Frameworks */,
 				CED577A018A5D3420025C83C /* Foundation.framework in Frameworks */,
-				CED577A218A5D3420025C83C /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +324,26 @@
 			name = TopicViewController;
 			sourceTree = "<group>";
 		};
+		9DB9654C197BE3BF00F5DCFE /* ChromeProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				9DB9654D197BE3BF00F5DCFE /* ChromeProgressBar.h */,
+				9DB9654E197BE3BF00F5DCFE /* ChromeProgressBar.m */,
+			);
+			name = ChromeProgressBar;
+			path = view/view/ChromeProgressBar;
+			sourceTree = "<group>";
+		};
+		9DB9654F197BE3BF00F5DCFE /* IMTWebView */ = {
+			isa = PBXGroup;
+			children = (
+				9DB96550197BE3BF00F5DCFE /* IMTWebView.h */,
+				9DB96551197BE3BF00F5DCFE /* IMTWebView.m */,
+			);
+			name = IMTWebView;
+			path = view/view/IMTWebView;
+			sourceTree = "<group>";
+		};
 		CED5779118A5D3420025C83C = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +376,7 @@
 		CED5779C18A5D3420025C83C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9DB96554197BE4A000F5DCFE /* QuartzCore.framework */,
 				CED5779D18A5D3420025C83C /* UIKit.framework */,
 				CED5779F18A5D3420025C83C /* Foundation.framework */,
 				CED577A118A5D3420025C83C /* CoreGraphics.framework */,
@@ -425,6 +455,8 @@
 		CEE94E9B18AB216B006A24F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9DB9654C197BE3BF00F5DCFE /* ChromeProgressBar */,
+				9DB9654F197BE3BF00F5DCFE /* IMTWebView */,
 				CEFD930218AB537600CD3F47 /* TextTableViewCell.h */,
 				CEFD930318AB537600CD3F47 /* TextTableViewCell.m */,
 				9D2B909D1953DCBD00B3F164 /* ImageInfoUnitView.h */,
@@ -715,6 +747,7 @@
 				9D2B9096193EF34A00B3F164 /* CookSkillViewController.m in Sources */,
 				9D2B909F1953DCBD00B3F164 /* ImageInfoUnitView.m in Sources */,
 				CEFD931118AB56A600CD3F47 /* ImageInfo.m in Sources */,
+				9DB96553197BE3BF00F5DCFE /* IMTWebView.m in Sources */,
 				CEFD931518AB60CC00CD3F47 /* TeaCategoryTableViewController.m in Sources */,
 				CEFD935118AB684F00CD3F47 /* ASIAuthenticationDialog.m in Sources */,
 				CEFD935218AB684F00CD3F47 /* ASIDataCompressor.m in Sources */,
@@ -722,6 +755,7 @@
 				CEFD935418AB684F00CD3F47 /* ASIDownloadCache.m in Sources */,
 				CEFD935518AB684F00CD3F47 /* ASIFormDataRequest.m in Sources */,
 				9D32BC9C1971202A00C89803 /* SpeciesTopicManager.m in Sources */,
+				9DB96552197BE3BF00F5DCFE /* ChromeProgressBar.m in Sources */,
 				CEFD935618AB684F00CD3F47 /* ASIHTTPRequest.m in Sources */,
 				CEFD935718AB684F00CD3F47 /* ASIInputStream.m in Sources */,
 				9D32BC93196ACF8000C89803 /* SepciesDetailTableViewController.m in Sources */,
@@ -814,7 +848,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -839,7 +873,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

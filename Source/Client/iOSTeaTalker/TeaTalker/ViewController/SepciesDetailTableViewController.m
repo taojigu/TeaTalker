@@ -14,6 +14,8 @@
 #import "ImageInfo.h"
 #import "TopicWebViewController.h"
 #import "TopicTableViewController.h"
+#import "TopicDataManager.h"
+#import "SpeciesTopicManager.h"
 
 #define SpeciesSection 0
 #define IntroductionRow 0
@@ -201,6 +203,7 @@
     }
     if ([dstvc class]==[TopicTableViewController class]) {
         TopicTableViewController*ttvc=(TopicTableViewController*)dstvc;
+        ttvc.topicDataManager=[[SpeciesTopicManager alloc]init];
         
     }
     
