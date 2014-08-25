@@ -16,7 +16,10 @@
 #import "ElementsContainer.h"
 
 #import "TopicWebViewController.h"
-@interface TopicTableViewController ()<NSURLSessionDelegate>
+@interface TopicTableViewController ()<NSURLSessionDelegate>{
+    @private
+    IBOutlet UISearchDisplayController*searchDisplayController;
+}
 
 -(IBAction)loadMoreTopics:(id)sender;
 
@@ -41,6 +44,9 @@
 {
     [super viewDidLoad];
     [self requestTopicPage:0];
+    if (topicType==TopicTypeSpecies) {
+    
+    }
 
     CGFloat height=CGRectGetHeight(self.tableView.tableHeaderView.frame);
     self.tableView.contentOffset=CGPointMake(0, height);

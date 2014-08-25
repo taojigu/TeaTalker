@@ -30,10 +30,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="Jjh-NK-9FD">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="Jjh-NK-9FD">
                             <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
                             <connections>
                                 <outlet property="delegate" destination="cD3-kY-ti2" id="OxB-Yh-ve6"/>
                             </connections>
@@ -323,8 +327,19 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="茶叶" id="1yf-ZG-Vyg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="lLe-Mg-3hs" id="0qU-8P-XQD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2EX-EU-7cq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="lLe-Mg-3hs">
+                    <connections>
+                        <outlet property="delegate" destination="J1c-DP-yyx" id="hcj-Om-gtu"/>
+                        <outlet property="searchContentsController" destination="J1c-DP-yyx" id="DRc-DM-IIh"/>
+                        <outlet property="searchResultsDataSource" destination="J1c-DP-yyx" id="mbP-gi-YSg"/>
+                        <outlet property="searchResultsDelegate" destination="J1c-DP-yyx" id="CxJ-hk-Cr6"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-723" y="-1082"/>
         </scene>
