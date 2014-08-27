@@ -38,11 +38,13 @@
 }
 
 +(CGFloat)expectedHeight:(ImageInfo*)imageInf introductionFont:(UIFont*)font width:(CGFloat)width{
-    
+
     CGFloat height=imageInf.image.size.height;
-    CGSize textSize=[imageInf.introduction sizeWithFont:font forWidth:width lineBreakMode:NSLineBreakByWordWrapping];
-    height+=textSize.height;
-    return 0;
+    NSMutableDictionary*dict=[[NSMutableDictionary alloc]init];
+    [dict setObject:font forKey:NSFontAttributeName];
+    CGRect rect=[imageInf.introduction boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil];
+    height+=CGRectGetHeight(rect);
+    return height;
 }
 
 @end

@@ -12,13 +12,16 @@
 #import "Topic.h"
 #import "ImageInfo.h"
 #import "TopicContainerParser.h"
+#import "TeaTopicManager.h"
 
 #import "ElementsContainer.h"
 
 #import "TopicWebViewController.h"
-@interface TopicTableViewController ()<NSURLSessionDelegate>{
+@interface TopicTableViewController ()<NSURLSessionDelegate,UISearchDisplayDelegate,UISearchBarDelegate>{
     @private
     IBOutlet UISearchDisplayController*searchDisplayController;
+    ElementsContainer*searchResultContainer;
+    
 }
 
 -(IBAction)loadMoreTopics:(id)sender;
@@ -43,6 +46,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    searchDisplayController.delegate=self;
+    if (nil==self.topicDataManager) {
+        self.topicDataManager=[[TeaTopicManager alloc]init];
+    }
     [self requestTopicPage:0];
     if (topicType==TopicTypeSpecies) {
     
@@ -68,7 +75,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    ElementsContainer*topicContainer=self.topicDataManager.topicElementContainer;
+    ElementsContainer*topicContainer=nil;
+    if (tableView==self.searchDisplayController.searchResultsTableView) {
+        topicContainer=searchResultContainer;
+    }
+    else{
+        
+        topicContainer=self.topicDataManager.topicElementContainer;
+
+    }
+    
     return topicContainer.count;
 }
 
@@ -77,8 +93,17 @@
     static NSString *CellIdentifier = @"TopicCellIdentifer";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    
     // Configure the cell...
-    ElementsContainer*topicContainer=[self.topicDataManager topicElementContainer];
+    
+    ElementsContainer*topicContainer=nil;
+    if (tableView==self.searchDisplayController.searchResultsTableView) {
+        topicContainer=searchResultContainer;
+    }
+    else{
+        topicContainer=self.topicDataManager.topicElementContainer;
+    }
+    
     Topic*topic=[topicContainer.elementArray objectAtIndex:indexPath.row];
     cell.imageView.image=topic.titleImageInfo.image;
     cell.textLabel.text=topic.title;
@@ -151,6 +176,14 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+#pragma mark -- UISearchBarControlDelegate messages
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString{
+    return NO;
+}
+
+#pragma mark -- UISearchBarDelegate message
+
 
 
 #pragma mark -- action messages

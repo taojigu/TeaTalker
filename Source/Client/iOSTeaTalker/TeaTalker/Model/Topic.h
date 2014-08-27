@@ -10,7 +10,8 @@
 
 typedef enum {
     TopicTypeSpecies=0,
-    TopicTypeTeaCategory=1
+    TopicTypeTeaCategory=1,
+    TopicTypeTea=2
 } TopicType;
 
 @class ImageInfo;
