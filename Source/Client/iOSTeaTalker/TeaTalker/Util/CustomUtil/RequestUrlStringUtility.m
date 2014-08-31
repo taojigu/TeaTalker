@@ -21,4 +21,7 @@
 +(NSString*)recommandTopicReqeustUrl:(NSInteger)pageIndex pageSize:(NSInteger)pageSize{
     return @"http://www.163.com";
 }
++(NSString*)searchRequestUrlString:(NSString*)word pageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize{
+    return @"http://www.163.com";
+}
 @end

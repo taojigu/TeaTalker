@@ -18,6 +18,20 @@
 @synthesize resultType;
 @synthesize imageUrl;
 
+
++(SearchResultElement*)fakeSearchResult:(NSInteger)index{
+    
+    SearchResultElement*sre=[[SearchResultElement alloc]init];
+    sre.title=[NSString stringWithFormat:@"SearchResultTitle%li",(long)index];
+    if (2>=index) {
+        sre.resultType=SearchResultTypeSpecies;
+    }
+    else{
+        sre.resultType=SearchResultTypeTopic;
+    }
+    return sre;
+}
+
 @end
 
 NSString* NSStringFromSearchType(SearchResultType searchType){

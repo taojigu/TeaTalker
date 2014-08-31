@@ -9,8 +9,10 @@
 #import "SearchResultTableViewController.h"
 #import "ElementsContainer.h"
 #import "SearchResultElement.h"
+#import "RequestUrlStringUtility.h"
+#import "SearchResultParser.h"
 
-@interface SearchResultTableViewController (){
+@interface SearchResultTableViewController ()<NSURLSessionDelegate>{
     
     @private
     ElementsContainer*searchResultContainer;
@@ -37,6 +39,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    searchResultContainer=[[ElementsContainer alloc]init];
+    
     
     [self requestSearchResultPage:self.searchWord pageIndex:0 pageSize:12];
     // Uncomment the following line to preserve selection between presentations.
@@ -132,10 +136,34 @@
 }
 */
 
+#pragma mark -- NSURLSessionDelegate
+
 #pragma private messages
 
 -(void)requestSearchResultPage:(NSString*)word pageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize{
     
+    NSString*urlString=[RequestUrlStringUtility searchRequestUrlString:word pageIndex:pageIndex pageSize:pageSize];
+    NSURLSessionConfiguration*config=[NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession*session=[NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSessionDataTask*task=[session dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (nil!=error) {
+            NSLog(@"The page failed %@",[error localizedFailureReason]);
+            return ;
+        }
+        [self processSearchResult:data];
+        [self.tableView reloadData];
+        
+    }];
+    [task resume];
+    
 }
+-(void)processSearchResult:(NSData*)data{
+    SearchResultParser*parser=[[SearchResultParser alloc]init];
+    ElementsContainer*result=[parser parse:data];
+    [searchResultContainer.elementArray addObjectsFromArray:result.elementArray];
+    searchResultContainer.pageIndex=result.pageIndex;
+    
+}
+
 
 @end

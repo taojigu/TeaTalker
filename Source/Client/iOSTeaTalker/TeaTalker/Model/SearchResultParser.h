@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SearchResultParser : NSObject
+@class ElementsContainer;
+
+@interface SearchResultParser : NSObject{
+    
+}
+
+-(ElementsContainer*)parse:(NSData*)data;
 
 @end
