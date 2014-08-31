@@ -14,4 +14,7 @@
 
 +(NSString*)teaCategoryURLString;
 +(NSString*)topicUrlString:(NSString*)speciesId pageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize;
+
+
++(NSString*)recommandTopicReqeustUrl:(NSInteger)pageIndex pageSize:(NSInteger)pageSize;
 @end

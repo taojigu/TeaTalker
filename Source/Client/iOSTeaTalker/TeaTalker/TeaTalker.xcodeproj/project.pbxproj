@@ -16,6 +16,10 @@
 		9D32BC96196E926800C89803 /* TopicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC95196E926800C89803 /* TopicWebViewController.m */; };
 		9D32BC9C1971202A00C89803 /* SpeciesTopicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC9B1971202A00C89803 /* SpeciesTopicManager.m */; };
 		9D35004619ADBC710070914A /* TeaTopicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35004519ADBC710070914A /* TeaTopicManager.m */; };
+		9D35004919AF02C40070914A /* TopicSearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35004819AF02C40070914A /* TopicSearchResultTableViewController.m */; };
+		9D35004C19AF1BC40070914A /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35004B19AF1BC40070914A /* HomeTableViewController.m */; };
+		9D35005019B070190070914A /* SearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35004F19B070190070914A /* SearchResultTableViewController.m */; };
+		9D35005319B075830070914A /* SearchResultElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35005219B075830070914A /* SearchResultElement.m */; };
 		9D8E8BB61918C26500922416 /* SpeciesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */; };
 		9D8E8BB91918CBBA00922416 /* Species.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB81918CBBA00922416 /* Species.m */; };
 		9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */; };
@@ -88,6 +92,14 @@
 		9D32BC9B1971202A00C89803 /* SpeciesTopicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeciesTopicManager.m; path = Model/TopicDataManager/SpeciesTopicManager.m; sourceTree = "<group>"; };
 		9D35004419ADBC710070914A /* TeaTopicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaTopicManager.h; path = Model/TopicDataManager/TeaTopicManager.h; sourceTree = "<group>"; };
 		9D35004519ADBC710070914A /* TeaTopicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeaTopicManager.m; path = Model/TopicDataManager/TeaTopicManager.m; sourceTree = "<group>"; };
+		9D35004719AF02C40070914A /* TopicSearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicSearchResultTableViewController.h; path = ViewController/TopicSearchResultTableViewController.h; sourceTree = "<group>"; };
+		9D35004819AF02C40070914A /* TopicSearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopicSearchResultTableViewController.m; path = ViewController/TopicSearchResultTableViewController.m; sourceTree = "<group>"; };
+		9D35004A19AF1BC40070914A /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewController.h; path = ViewController/HomeTableViewController.h; sourceTree = "<group>"; };
+		9D35004B19AF1BC40070914A /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewController.m; path = ViewController/HomeTableViewController.m; sourceTree = "<group>"; };
+		9D35004E19B070190070914A /* SearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultTableViewController.h; path = ViewController/SearchResultTableViewController.h; sourceTree = "<group>"; };
+		9D35004F19B070190070914A /* SearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultTableViewController.m; path = ViewController/SearchResultTableViewController.m; sourceTree = "<group>"; };
+		9D35005119B075830070914A /* SearchResultElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultElement.h; path = Model/SearchResultElement.h; sourceTree = "<group>"; };
+		9D35005219B075830070914A /* SearchResultElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultElement.m; path = Model/SearchResultElement.m; sourceTree = "<group>"; };
 		9D8E8BB41918C26500922416 /* SpeciesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeciesDetailViewController.h; path = ViewController/SpeciesDetailViewController.h; sourceTree = "<group>"; };
 		9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeciesDetailViewController.m; path = ViewController/SpeciesDetailViewController.m; sourceTree = "<group>"; };
 		9D8E8BB71918CBBA00922416 /* Species.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Species.h; path = Model/Species.h; sourceTree = "<group>"; };
@@ -213,6 +225,8 @@
 				9D2B9098193EF4CA00B3F164 /* ContentObject.m */,
 				9D2B909A1952E33B00B3F164 /* CookTip.h */,
 				9D2B909B1952E33B00B3F164 /* CookTip.m */,
+				9D35005119B075830070914A /* SearchResultElement.h */,
+				9D35005219B075830070914A /* SearchResultElement.m */,
 			);
 			name = DataStruct;
 			sourceTree = "<group>";
@@ -251,6 +265,8 @@
 				CEE94E8818A9CA24006A24F5 /* TopicTableViewController.m */,
 				9D32BC94196E926800C89803 /* TopicWebViewController.h */,
 				9D32BC95196E926800C89803 /* TopicWebViewController.m */,
+				9D35004719AF02C40070914A /* TopicSearchResultTableViewController.h */,
+				9D35004819AF02C40070914A /* TopicSearchResultTableViewController.m */,
 			);
 			name = TopicViewController;
 			sourceTree = "<group>";
@@ -370,6 +386,10 @@
 				CEE94E8E18A9D07B006A24F5 /* MoreViewController.m */,
 				CEE94E9018AA0CFB006A24F5 /* FeedbackViewController.h */,
 				CEE94E9118AA0CFB006A24F5 /* FeedbackViewController.m */,
+				9D35004A19AF1BC40070914A /* HomeTableViewController.h */,
+				9D35004B19AF1BC40070914A /* HomeTableViewController.m */,
+				9D35004E19B070190070914A /* SearchResultTableViewController.h */,
+				9D35004F19B070190070914A /* SearchResultTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -553,9 +573,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D35005019B070190070914A /* SearchResultTableViewController.m in Sources */,
 				CED577AA18A5D3420025C83C /* main.m in Sources */,
 				9D32BC96196E926800C89803 /* TopicWebViewController.m in Sources */,
 				CED577AE18A5D3420025C83C /* AppDelegate.m in Sources */,
+				9D35004C19AF1BC40070914A /* HomeTableViewController.m in Sources */,
 				CEE94E8918A9CA24006A24F5 /* TopicTableViewController.m in Sources */,
 				CEE94E8F18A9D07B006A24F5 /* MoreViewController.m in Sources */,
 				9D8E8BB91918CBBA00922416 /* Species.m in Sources */,
@@ -566,8 +588,10 @@
 				CEFD930B18AB563700CD3F47 /* Topic.m in Sources */,
 				CEFD931018AB56A600CD3F47 /* ElementsContainer.m in Sources */,
 				9D35004619ADBC710070914A /* TeaTopicManager.m in Sources */,
+				9D35005319B075830070914A /* SearchResultElement.m in Sources */,
 				9D2B9099193EF4CA00B3F164 /* ContentObject.m in Sources */,
 				9D2B9096193EF34A00B3F164 /* CookSkillViewController.m in Sources */,
+				9D35004919AF02C40070914A /* TopicSearchResultTableViewController.m in Sources */,
 				9D2B909F1953DCBD00B3F164 /* ImageInfoUnitView.m in Sources */,
 				CEFD931118AB56A600CD3F47 /* ImageInfo.m in Sources */,
 				9DB96553197BE3BF00F5DCFE /* IMTWebView.m in Sources */,
@@ -648,7 +672,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -673,7 +697,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

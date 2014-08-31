@@ -47,6 +47,8 @@
 {
     [super viewDidLoad];
     searchDisplayController.delegate=self;
+    searchDisplayController.searchResultsTitle=@"Result Text";
+    
     if (nil==self.topicDataManager) {
         self.topicDataManager=[[TeaTopicManager alloc]init];
     }
@@ -77,7 +79,8 @@
 {
     ElementsContainer*topicContainer=nil;
     if (tableView==self.searchDisplayController.searchResultsTableView) {
-        topicContainer=searchResultContainer;
+        return 1;
+        //topicContainer=searchResultContainer;
     }
     else{
         
@@ -90,26 +93,38 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"TopicCellIdentifer";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    
-    // Configure the cell...
-    
-    ElementsContainer*topicContainer=nil;
+
     if (tableView==self.searchDisplayController.searchResultsTableView) {
-        topicContainer=searchResultContainer;
+        static NSString* SearchingCellIdentifier=@"SearchingTableViewCell";
+        UITableViewCell*searchingCell=[self.tableView dequeueReusableCellWithIdentifier:SearchingCellIdentifier forIndexPath:indexPath];
+        NSString*word=self.searchDisplayController.searchBar.text;
+        NSString*text=nil;
+        if (0==word.length) {
+            text=@"搜索词为空";
+            searchingCell.exclusiveTouch=YES;
+        }
+        else{
+            text=[NSString stringWithFormat:@"搜索关键字：%@",word];
+            searchingCell.exclusiveTouch=NO;
+        }
+        
+        searchingCell.textLabel.text=text;
+        return searchingCell;
+        
     }
     else{
+        static NSString *CellIdentifier = @"TopicCellIdentifer";
+        ElementsContainer*topicContainer=nil;
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
         topicContainer=self.topicDataManager.topicElementContainer;
+        Topic*topic=[topicContainer.elementArray objectAtIndex:indexPath.row];
+        cell.imageView.image=topic.titleImageInfo.image;
+        cell.textLabel.text=topic.title;
+        cell.detailTextLabel.text=topic.introduction;
+        return cell;
     }
     
-    Topic*topic=[topicContainer.elementArray objectAtIndex:indexPath.row];
-    cell.imageView.image=topic.titleImageInfo.image;
-    cell.textLabel.text=topic.title;
-    cell.detailTextLabel.text=topic.introduction;
-    
-    return cell;
+    return nil;
 }
 
 /*
@@ -179,12 +194,24 @@
 #pragma mark -- UISearchBarControlDelegate messages
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString{
-    return NO;
+    
+    
+    return YES;
 }
-
+- (void) searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller{
+    
+}
+-(void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller{
+    
+}
+-(void)searchDisplayController:(UISearchDisplayController *)controller didShowSearchResultsTableView:(UITableView *)tableView{
+    
+}
 #pragma mark -- UISearchBarDelegate message
 
-
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    
+}
 
 #pragma mark -- action messages
 

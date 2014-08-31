@@ -22,6 +22,7 @@
 
 -(NSString*)pageRequestUrlString:(NSInteger)pageIndex{
     return @"http://www.163.com";
+    
 }
 -(NSString*)pageRequestUrlString:(NSInteger)pageIndex pageSize:(NSInteger)pageSize{
     return @"http://www.baidu.com";
