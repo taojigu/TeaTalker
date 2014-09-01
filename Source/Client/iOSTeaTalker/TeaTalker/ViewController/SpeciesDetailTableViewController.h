@@ -10,7 +10,7 @@
 
 @class Species;
 
-@interface SepciesDetailTableViewController : UITableViewController{
+@interface SpeciesDetailTableViewController : UITableViewController{
     
 }
 

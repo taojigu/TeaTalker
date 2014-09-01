@@ -63,13 +63,14 @@
     //self.hidesBottomBarWhenPushed=YES;
     //self.tabBarController.tabBar.hidden=YES;
     
+    if (0==[self.species.urlString length]) {
+        [self requestSpeciesData];
+    }
+    else{
+        [self loadSpeciesData];
+    }
     
-    introductionTextView.text=self.species.introduction;
-    ImageInfo*iif=[self.species.imageInfoArray objectAtIndex:0];
-    
-    headerImageView.image=iif.image;
-    
-    [self requestTopicData:0];
+
     
     //[self addTapRecognizer];
 
@@ -170,6 +171,34 @@
 
 #pragma mark -- private messages
 
+-(void)requestSpeciesData{
+    NSAssert(0!=self.species.urlString.length, @"Species url should not be nil");
+    NSURLSessionConfiguration*config=[NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession*session=[NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSessionTask*task=[session dataTaskWithURL:[NSURL URLWithString:self.species.urlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (nil!=error) {
+            NSLog(@"Faild to load Species Data ,Error:%@",[error localizedDescription]);
+            return ;
+        }
+        [self processSpeciesData:data];
+    }];
+    [task resume];
+}
+-(void)processSpeciesData:(NSData*)data{
+    
+    self.species=[Species fakeSpecies:0];
+    [self loadSpeciesData];
+
+}
+-(void)loadSpeciesData{
+    introductionTextView.text=self.species.introduction;
+    ImageInfo*iif=[self.species.imageInfoArray objectAtIndex:0];
+    
+    headerImageView.image=iif.image;
+    
+    [self requestTopicData:0];
+}
+
 -(void)addTapRecognizer{
     UITapGestureRecognizer*tapRecg=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewTapped:)];
     [self.view addGestureRecognizer:tapRecg];
@@ -195,6 +224,8 @@
     
     [task resume];
 }
+                           
+                           
 -(IBAction)rightButtonClicked:(id)sender{
     
 }

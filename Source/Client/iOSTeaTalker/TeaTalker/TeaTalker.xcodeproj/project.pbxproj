@@ -12,7 +12,7 @@
 		9D2B9099193EF4CA00B3F164 /* ContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B9098193EF4CA00B3F164 /* ContentObject.m */; };
 		9D2B909C1952E33B00B3F164 /* CookTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B909B1952E33B00B3F164 /* CookTip.m */; };
 		9D2B909F1953DCBD00B3F164 /* ImageInfoUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B909E1953DCBD00B3F164 /* ImageInfoUnitView.m */; };
-		9D32BC93196ACF8000C89803 /* SepciesDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC92196ACF8000C89803 /* SepciesDetailTableViewController.m */; };
+		9D32BC93196ACF8000C89803 /* SpeciesDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC92196ACF8000C89803 /* SpeciesDetailTableViewController.m */; };
 		9D32BC96196E926800C89803 /* TopicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC95196E926800C89803 /* TopicWebViewController.m */; };
 		9D32BC9C1971202A00C89803 /* SpeciesTopicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC9B1971202A00C89803 /* SpeciesTopicManager.m */; };
 		9D35004619ADBC710070914A /* TeaTopicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35004519ADBC710070914A /* TeaTopicManager.m */; };
@@ -84,8 +84,8 @@
 		9D2B909B1952E33B00B3F164 /* CookTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CookTip.m; path = Model/CookTip.m; sourceTree = "<group>"; };
 		9D2B909D1953DCBD00B3F164 /* ImageInfoUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageInfoUnitView.h; path = view/view/ImageInfoUnitView.h; sourceTree = "<group>"; };
 		9D2B909E1953DCBD00B3F164 /* ImageInfoUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageInfoUnitView.m; path = view/view/ImageInfoUnitView.m; sourceTree = "<group>"; };
-		9D32BC91196ACF8000C89803 /* SepciesDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SepciesDetailTableViewController.h; path = ViewController/SepciesDetailTableViewController.h; sourceTree = "<group>"; };
-		9D32BC92196ACF8000C89803 /* SepciesDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SepciesDetailTableViewController.m; path = ViewController/SepciesDetailTableViewController.m; sourceTree = "<group>"; };
+		9D32BC91196ACF8000C89803 /* SpeciesDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeciesDetailTableViewController.h; path = ViewController/SpeciesDetailTableViewController.h; sourceTree = "<group>"; };
+		9D32BC92196ACF8000C89803 /* SpeciesDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeciesDetailTableViewController.m; path = ViewController/SpeciesDetailTableViewController.m; sourceTree = "<group>"; };
 		9D32BC94196E926800C89803 /* TopicWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicWebViewController.h; path = ViewController/TopicWebViewController.h; sourceTree = "<group>"; };
 		9D32BC95196E926800C89803 /* TopicWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopicWebViewController.m; path = ViewController/TopicWebViewController.m; sourceTree = "<group>"; };
 		9D32BC99197115E400C89803 /* TopicDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TopicDataManager.h; path = Model/TopicDataManager/TopicDataManager.h; sourceTree = "<group>"; };
@@ -255,8 +255,8 @@
 				9D8E8BCC1921006500922416 /* CategoryIntroductionViewController.m */,
 				9D2B9094193EF34A00B3F164 /* CookSkillViewController.h */,
 				9D2B9095193EF34A00B3F164 /* CookSkillViewController.m */,
-				9D32BC91196ACF8000C89803 /* SepciesDetailTableViewController.h */,
-				9D32BC92196ACF8000C89803 /* SepciesDetailTableViewController.m */,
+				9D32BC91196ACF8000C89803 /* SpeciesDetailTableViewController.h */,
+				9D32BC92196ACF8000C89803 /* SpeciesDetailTableViewController.m */,
 			);
 			name = TeaViewController;
 			sourceTree = "<group>";
@@ -604,7 +604,7 @@
 				CEFD931518AB60CC00CD3F47 /* TeaCategoryTableViewController.m in Sources */,
 				9D32BC9C1971202A00C89803 /* SpeciesTopicManager.m in Sources */,
 				9DB96552197BE3BF00F5DCFE /* ChromeProgressBar.m in Sources */,
-				9D32BC93196ACF8000C89803 /* SepciesDetailTableViewController.m in Sources */,
+				9D32BC93196ACF8000C89803 /* SpeciesDetailTableViewController.m in Sources */,
 				9D2B9093193DCB9F00B3F164 /* TopicContainerParser.m in Sources */,
 				9D2B909C1952E33B00B3F164 /* CookTip.m in Sources */,
 				9D8E8BCD1921006500922416 /* CategoryIntroductionViewController.m in Sources */,

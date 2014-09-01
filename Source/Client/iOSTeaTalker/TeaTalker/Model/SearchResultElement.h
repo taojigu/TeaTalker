@@ -22,6 +22,7 @@ typedef enum{
 @property(nonatomic,strong)NSString*resultID;
 @property(nonatomic,strong)NSString*imageUrl;
 @property(nonatomic,assign)SearchResultType resultType;
+@property(nonatomic,assign)NSString*urlString;
 
 
 +(SearchResultElement*)fakeSearchResult:(NSInteger)index;

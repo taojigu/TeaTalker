@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 voole. All rights reserved.
 //
 
-#import "SepciesDetailTableViewController.h"
+#import "SpeciesDetailTableViewController.h"
 #import "TextTableViewCell.h"
 #import "Species.h"
 #import "ResourceConfigure.h"
@@ -30,7 +30,7 @@
 
 #define TopicCellHeight 60
 
-@interface SepciesDetailTableViewController (){
+@interface SpeciesDetailTableViewController ()<NSURLSessionDelegate>{
     
 }
 
@@ -38,7 +38,7 @@
 
 @end
 
-@implementation SepciesDetailTableViewController
+@implementation SpeciesDetailTableViewController
 
 @synthesize species;
 
@@ -66,6 +66,12 @@
     [super viewDidLoad];
     
     self.hidesBottomBarWhenPushed=YES;
+    
+    if (0!=[self.species.urlString length]) {
+        [self requestSpeciesData];
+        return;
+    }
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -214,6 +220,38 @@
 
 
 #pragma mark -- private messages
+
+-(void)requestSpeciesData{
+    NSAssert(0!=self.species.urlString.length, @"Species url should not be nil");
+    NSURLSessionConfiguration*config=[NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession*session=[NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSessionTask*task=[session dataTaskWithURL:[NSURL URLWithString:self.species.urlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (nil!=error) {
+            NSLog(@"Faild to load Species Data ,Error:%@",[error localizedDescription]);
+            return ;
+        }
+        [self processSpeciesData:data];
+    }];
+    [task resume];
+}
+-(void)processSpeciesData:(NSData*)data{
+    
+    self.species=[Species fakeSpecies:1];
+    [self.tableView reloadData];
+    //[self loadSpeciesData];
+    
+}
+/*
+-(void)loadSpeciesData{
+    introductionTextView.text=self.species.introduction;
+    ImageInfo*iif=[self.species.imageInfoArray objectAtIndex:0];
+    
+    headerImageView.image=iif.image;
+    
+    [self requestTopicData:0];
+}
+ */
+
 
 -(UITableViewCell*)speciesSectionCell:(UITableView*)tableView indexPath:(NSIndexPath*)indexPath{
     

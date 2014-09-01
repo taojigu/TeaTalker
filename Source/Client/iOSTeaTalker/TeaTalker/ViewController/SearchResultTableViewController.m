@@ -11,6 +11,11 @@
 #import "SearchResultElement.h"
 #import "RequestUrlStringUtility.h"
 #import "SearchResultParser.h"
+#import "TopicWebViewController.h"
+#import "SpeciesDetailViewController.h"
+#import "Topic.h"
+#import "Species.h"
+#import "SpeciesDetailTableViewController.h"
 
 @interface SearchResultTableViewController ()<NSURLSessionDelegate>{
     
@@ -125,7 +130,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -133,8 +138,29 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    SearchResultElement*result=[searchResultContainer.elementArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    UIViewController*viewcontroller=segue.destinationViewController;
+    if ([viewcontroller class]==[TopicWebViewController class]) {
+
+        TopicWebViewController*tvc=(TopicWebViewController*)viewcontroller;
+        Topic*tp=[[Topic alloc]init];
+        tp.title=result.title;
+        tp.urlString=result.urlString;
+        tvc.topic=tp;
+        return;
+    }
+    if ([viewcontroller class]==[SpeciesDetailTableViewController class]) {
+        
+        SpeciesDetailTableViewController*sdtvc=(SpeciesDetailTableViewController*)viewcontroller;
+        Species*spc=[[Species alloc]init];
+        spc.name=result.title;
+        spc.introduction=result.introduction;
+        spc.urlString=result.urlString;
+        sdtvc.species=spc;
+        return;
+    }
 }
-*/
+
 
 #pragma mark -- NSURLSessionDelegate
 
