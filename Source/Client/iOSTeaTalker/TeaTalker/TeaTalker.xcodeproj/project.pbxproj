@@ -21,7 +21,7 @@
 		9D35005019B070190070914A /* SearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35004F19B070190070914A /* SearchResultTableViewController.m */; };
 		9D35005319B075830070914A /* SearchResultElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35005219B075830070914A /* SearchResultElement.m */; };
 		9D35005919B320D00070914A /* SearchResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35005819B320D00070914A /* SearchResultParser.m */; };
-		9D8E8BB61918C26500922416 /* SpeciesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */; };
+		9D35005C19B56CE90070914A /* TeaCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35005B19B56CE90070914A /* TeaCategoryTableViewController.m */; };
 		9D8E8BB91918CBBA00922416 /* Species.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB81918CBBA00922416 /* Species.m */; };
 		9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */; };
 		9D8E8BCD1921006500922416 /* CategoryIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BCC1921006500922416 /* CategoryIntroductionViewController.m */; };
@@ -53,7 +53,6 @@
 		CEFD930B18AB563700CD3F47 /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD930A18AB563700CD3F47 /* Topic.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEFD931018AB56A600CD3F47 /* ElementsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD930D18AB56A600CD3F47 /* ElementsContainer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEFD931118AB56A600CD3F47 /* ImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD930F18AB56A600CD3F47 /* ImageInfo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CEFD931518AB60CC00CD3F47 /* TeaCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD931418AB60CC00CD3F47 /* TeaCategoryTableViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEFD936918AB6ACD00CD3F47 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD936818AB6ACD00CD3F47 /* CFNetwork.framework */; };
 		CEFD936B18AB6AD300CD3F47 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD936A18AB6AD300CD3F47 /* SystemConfiguration.framework */; };
 		CEFD936D18AB6AEC00CD3F47 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD936C18AB6AEC00CD3F47 /* MobileCoreServices.framework */; };
@@ -103,8 +102,8 @@
 		9D35005219B075830070914A /* SearchResultElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultElement.m; path = Model/SearchResultElement.m; sourceTree = "<group>"; };
 		9D35005719B320D00070914A /* SearchResultParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultParser.h; path = Model/SearchResultParser.h; sourceTree = "<group>"; };
 		9D35005819B320D00070914A /* SearchResultParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultParser.m; path = Model/SearchResultParser.m; sourceTree = "<group>"; };
-		9D8E8BB41918C26500922416 /* SpeciesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeciesDetailViewController.h; path = ViewController/SpeciesDetailViewController.h; sourceTree = "<group>"; };
-		9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeciesDetailViewController.m; path = ViewController/SpeciesDetailViewController.m; sourceTree = "<group>"; };
+		9D35005A19B56CE90070914A /* TeaCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaCategoryTableViewController.h; path = ViewController/TeaCategoryTableViewController.h; sourceTree = "<group>"; };
+		9D35005B19B56CE90070914A /* TeaCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeaCategoryTableViewController.m; path = ViewController/TeaCategoryTableViewController.m; sourceTree = "<group>"; };
 		9D8E8BB71918CBBA00922416 /* Species.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Species.h; path = Model/Species.h; sourceTree = "<group>"; };
 		9D8E8BB81918CBBA00922416 /* Species.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Species.m; path = Model/Species.m; sourceTree = "<group>"; };
 		9D8E8BBA1918D06500922416 /* TeaCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaCategoryViewController.h; path = ViewController/TeaCategoryViewController.h; sourceTree = "<group>"; };
@@ -155,8 +154,6 @@
 		CEFD930D18AB56A600CD3F47 /* ElementsContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ElementsContainer.m; path = Model/ElementsContainer.m; sourceTree = "<group>"; };
 		CEFD930E18AB56A600CD3F47 /* ImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageInfo.h; path = Model/ImageInfo.h; sourceTree = "<group>"; };
 		CEFD930F18AB56A600CD3F47 /* ImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageInfo.m; path = Model/ImageInfo.m; sourceTree = "<group>"; };
-		CEFD931318AB60CC00CD3F47 /* TeaCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaCategoryTableViewController.h; path = ViewController/TeaCategoryTableViewController.h; sourceTree = "<group>"; };
-		CEFD931418AB60CC00CD3F47 /* TeaCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeaCategoryTableViewController.m; path = ViewController/TeaCategoryTableViewController.m; sourceTree = "<group>"; };
 		CEFD936818AB6ACD00CD3F47 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		CEFD936A18AB6AD300CD3F47 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CEFD936C18AB6AEC00CD3F47 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -245,10 +242,8 @@
 		9D8E8BC61920FACE00922416 /* TeaViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CEFD931318AB60CC00CD3F47 /* TeaCategoryTableViewController.h */,
-				CEFD931418AB60CC00CD3F47 /* TeaCategoryTableViewController.m */,
-				9D8E8BB41918C26500922416 /* SpeciesDetailViewController.h */,
-				9D8E8BB51918C26500922416 /* SpeciesDetailViewController.m */,
+				9D35005A19B56CE90070914A /* TeaCategoryTableViewController.h */,
+				9D35005B19B56CE90070914A /* TeaCategoryTableViewController.m */,
 				9D8E8BBA1918D06500922416 /* TeaCategoryViewController.h */,
 				9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */,
 				9D8E8BCB1921006500922416 /* CategoryIntroductionViewController.h */,
@@ -586,7 +581,6 @@
 				CEE94E8918A9CA24006A24F5 /* TopicTableViewController.m in Sources */,
 				CEE94E8F18A9D07B006A24F5 /* MoreViewController.m in Sources */,
 				9D8E8BB91918CBBA00922416 /* Species.m in Sources */,
-				9D8E8BB61918C26500922416 /* SpeciesDetailViewController.m in Sources */,
 				9D35005919B320D00070914A /* SearchResultParser.m in Sources */,
 				CEE94E9218AA0CFB006A24F5 /* FeedbackViewController.m in Sources */,
 				CEFD930418AB537600CD3F47 /* TextTableViewCell.m in Sources */,
@@ -601,10 +595,10 @@
 				9D2B909F1953DCBD00B3F164 /* ImageInfoUnitView.m in Sources */,
 				CEFD931118AB56A600CD3F47 /* ImageInfo.m in Sources */,
 				9DB96553197BE3BF00F5DCFE /* IMTWebView.m in Sources */,
-				CEFD931518AB60CC00CD3F47 /* TeaCategoryTableViewController.m in Sources */,
 				9D32BC9C1971202A00C89803 /* SpeciesTopicManager.m in Sources */,
 				9DB96552197BE3BF00F5DCFE /* ChromeProgressBar.m in Sources */,
 				9D32BC93196ACF8000C89803 /* SpeciesDetailTableViewController.m in Sources */,
+				9D35005C19B56CE90070914A /* TeaCategoryTableViewController.m in Sources */,
 				9D2B9093193DCB9F00B3F164 /* TopicContainerParser.m in Sources */,
 				9D2B909C1952E33B00B3F164 /* CookTip.m in Sources */,
 				9D8E8BCD1921006500922416 /* CategoryIntroductionViewController.m in Sources */,

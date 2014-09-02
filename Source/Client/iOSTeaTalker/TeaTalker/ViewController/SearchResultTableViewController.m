@@ -12,7 +12,7 @@
 #import "RequestUrlStringUtility.h"
 #import "SearchResultParser.h"
 #import "TopicWebViewController.h"
-#import "SpeciesDetailViewController.h"
+//#import "SpeciesDetailViewController.h"
 #import "Topic.h"
 #import "Species.h"
 #import "SpeciesDetailTableViewController.h"

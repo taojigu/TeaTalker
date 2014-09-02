@@ -10,7 +10,8 @@
 #import "TeaCategory.h"
 #import "Species.h"
 #import "ImageInfo.h"
-#import "SpeciesDetailViewController.h"
+//#import "SpeciesDetailViewController.h"
+#import "SpeciesDetailTableViewController.h"
 
 #define ImageViewTag 101
 #define NameLabelTag 102
@@ -137,7 +138,7 @@
     // Pass the selected object to the new view controller.
     NSIndexPath*indexPath=[self.tableView indexPathForSelectedRow];
     Species*spc=[self.teaCategory.species.elementArray objectAtIndex:indexPath.row];
-    SpeciesDetailViewController*sdvc=(SpeciesDetailViewController*)[segue destinationViewController];
+    SpeciesDetailTableViewController*sdvc=(SpeciesDetailTableViewController*)[segue destinationViewController];
     //sdvc.hidesBottomBarWhenPushed=YES;
     sdvc.species=spc;
 }
