@@ -71,6 +71,7 @@
     
      height+=attriRect.size.height;
     return height;
+    //return 250;
 }
 -(void)initCustomViews{
     

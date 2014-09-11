@@ -16,12 +16,13 @@
 		9D32BC96196E926800C89803 /* TopicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC95196E926800C89803 /* TopicWebViewController.m */; };
 		9D32BC9C1971202A00C89803 /* SpeciesTopicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC9B1971202A00C89803 /* SpeciesTopicManager.m */; };
 		9D35004619ADBC710070914A /* TeaTopicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35004519ADBC710070914A /* TeaTopicManager.m */; };
-		9D35004919AF02C40070914A /* TopicSearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35004819AF02C40070914A /* TopicSearchResultTableViewController.m */; };
 		9D35004C19AF1BC40070914A /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35004B19AF1BC40070914A /* HomeTableViewController.m */; };
 		9D35005019B070190070914A /* SearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35004F19B070190070914A /* SearchResultTableViewController.m */; };
 		9D35005319B075830070914A /* SearchResultElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35005219B075830070914A /* SearchResultElement.m */; };
 		9D35005919B320D00070914A /* SearchResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35005819B320D00070914A /* SearchResultParser.m */; };
 		9D35005C19B56CE90070914A /* TeaCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35005B19B56CE90070914A /* TeaCategoryTableViewController.m */; };
+		9D35006119C144DD0070914A /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D35005E19C144DD0070914A /* ProgressHUD.bundle */; };
+		9D35006219C144DD0070914A /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35006019C144DD0070914A /* ProgressHUD.m */; };
 		9D8E8BB91918CBBA00922416 /* Species.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB81918CBBA00922416 /* Species.m */; };
 		9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */; };
 		9D8E8BCD1921006500922416 /* CategoryIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BCC1921006500922416 /* CategoryIntroductionViewController.m */; };
@@ -92,8 +93,6 @@
 		9D32BC9B1971202A00C89803 /* SpeciesTopicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeciesTopicManager.m; path = Model/TopicDataManager/SpeciesTopicManager.m; sourceTree = "<group>"; };
 		9D35004419ADBC710070914A /* TeaTopicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaTopicManager.h; path = Model/TopicDataManager/TeaTopicManager.h; sourceTree = "<group>"; };
 		9D35004519ADBC710070914A /* TeaTopicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeaTopicManager.m; path = Model/TopicDataManager/TeaTopicManager.m; sourceTree = "<group>"; };
-		9D35004719AF02C40070914A /* TopicSearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicSearchResultTableViewController.h; path = ViewController/TopicSearchResultTableViewController.h; sourceTree = "<group>"; };
-		9D35004819AF02C40070914A /* TopicSearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopicSearchResultTableViewController.m; path = ViewController/TopicSearchResultTableViewController.m; sourceTree = "<group>"; };
 		9D35004A19AF1BC40070914A /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewController.h; path = ViewController/HomeTableViewController.h; sourceTree = "<group>"; };
 		9D35004B19AF1BC40070914A /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewController.m; path = ViewController/HomeTableViewController.m; sourceTree = "<group>"; };
 		9D35004E19B070190070914A /* SearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultTableViewController.h; path = ViewController/SearchResultTableViewController.h; sourceTree = "<group>"; };
@@ -104,6 +103,9 @@
 		9D35005819B320D00070914A /* SearchResultParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultParser.m; path = Model/SearchResultParser.m; sourceTree = "<group>"; };
 		9D35005A19B56CE90070914A /* TeaCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaCategoryTableViewController.h; path = ViewController/TeaCategoryTableViewController.h; sourceTree = "<group>"; };
 		9D35005B19B56CE90070914A /* TeaCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeaCategoryTableViewController.m; path = ViewController/TeaCategoryTableViewController.m; sourceTree = "<group>"; };
+		9D35005E19C144DD0070914A /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ProgressHUD.bundle; path = view/ProgressHUD/ProgressHUD.bundle; sourceTree = "<group>"; };
+		9D35005F19C144DD0070914A /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressHUD.h; path = view/ProgressHUD/ProgressHUD.h; sourceTree = "<group>"; };
+		9D35006019C144DD0070914A /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressHUD.m; path = view/ProgressHUD/ProgressHUD.m; sourceTree = "<group>"; };
 		9D8E8BB71918CBBA00922416 /* Species.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Species.h; path = Model/Species.h; sourceTree = "<group>"; };
 		9D8E8BB81918CBBA00922416 /* Species.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Species.m; path = Model/Species.m; sourceTree = "<group>"; };
 		9D8E8BBA1918D06500922416 /* TeaCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaCategoryViewController.h; path = ViewController/TeaCategoryViewController.h; sourceTree = "<group>"; };
@@ -231,6 +233,16 @@
 			name = DataStruct;
 			sourceTree = "<group>";
 		};
+		9D35005D19C144C10070914A /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9D35005E19C144DD0070914A /* ProgressHUD.bundle */,
+				9D35005F19C144DD0070914A /* ProgressHUD.h */,
+				9D35006019C144DD0070914A /* ProgressHUD.m */,
+			);
+			name = ProgressHUD;
+			sourceTree = "<group>";
+		};
 		9D8E8BC5191CCC5700922416 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,8 +275,6 @@
 				CEE94E8818A9CA24006A24F5 /* TopicTableViewController.m */,
 				9D32BC94196E926800C89803 /* TopicWebViewController.h */,
 				9D32BC95196E926800C89803 /* TopicWebViewController.m */,
-				9D35004719AF02C40070914A /* TopicSearchResultTableViewController.h */,
-				9D35004819AF02C40070914A /* TopicSearchResultTableViewController.m */,
 			);
 			name = TopicViewController;
 			sourceTree = "<group>";
@@ -404,6 +414,7 @@
 		CEE94E9B18AB216B006A24F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D35005D19C144C10070914A /* ProgressHUD */,
 				9DB9654C197BE3BF00F5DCFE /* ChromeProgressBar */,
 				9DB9654F197BE3BF00F5DCFE /* IMTWebView */,
 				CEFD930218AB537600CD3F47 /* TextTableViewCell.h */,
@@ -532,6 +543,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D35006119C144DD0070914A /* ProgressHUD.bundle in Resources */,
 				CED577A818A5D3420025C83C /* InfoPlist.strings in Resources */,
 				CED577B018A5D3420025C83C /* Default.png in Resources */,
 				CED577B218A5D3420025C83C /* Default@2x.png in Resources */,
@@ -591,7 +603,6 @@
 				9D35005319B075830070914A /* SearchResultElement.m in Sources */,
 				9D2B9099193EF4CA00B3F164 /* ContentObject.m in Sources */,
 				9D2B9096193EF34A00B3F164 /* CookSkillViewController.m in Sources */,
-				9D35004919AF02C40070914A /* TopicSearchResultTableViewController.m in Sources */,
 				9D2B909F1953DCBD00B3F164 /* ImageInfoUnitView.m in Sources */,
 				CEFD931118AB56A600CD3F47 /* ImageInfo.m in Sources */,
 				9DB96553197BE3BF00F5DCFE /* IMTWebView.m in Sources */,
@@ -604,6 +615,7 @@
 				9D8E8BCD1921006500922416 /* CategoryIntroductionViewController.m in Sources */,
 				9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */,
 				CEFD937718AB79FA00CD3F47 /* RequestUrlStringUtility.m in Sources */,
+				9D35006219C144DD0070914A /* ProgressHUD.m in Sources */,
 				CEFD937B18AB804800CD3F47 /* TeaCategoryArrayParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,6 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="xxh-Nt-4nw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="分类" id="nNB-Iw-348"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6ha-RQ-OOT">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -626,7 +625,7 @@
         <!--Species Detail Table View Controller - 品种详情-->
         <scene sceneID="FeW-L8-GnU">
             <objects>
-                <tableViewController id="ZgV-4i-inT" customClass="SpeciesDetailTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SpeciesDetailTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZgV-4i-inT" customClass="SpeciesDetailTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="138" sectionHeaderHeight="22" sectionFooterHeight="22" id="qIS-xd-jH2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -713,7 +712,7 @@
         <!--Topic Web View Controller-->
         <scene sceneID="HTh-7e-5Cv">
             <objects>
-                <viewController id="2ye-2d-KyR" customClass="TopicWebViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopicWebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2ye-2d-KyR" customClass="TopicWebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Ug-qe-KZX"/>
                         <viewControllerLayoutGuide type="bottom" id="4dI-Y6-Pxd"/>
@@ -816,7 +815,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="od1-Jc-0Uv"/>
+        <segue reference="GCT-og-h28"/>
         <segue reference="N40-IU-Fjb"/>
-        <segue reference="h4e-0x-Cfu"/>
     </inferredMetricsTieBreakers>
 </document>

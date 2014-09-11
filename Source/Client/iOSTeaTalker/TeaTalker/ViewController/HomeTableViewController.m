@@ -12,6 +12,7 @@
 #import "RequestUrlStringUtility.h"
 #import "TopicContainerParser.h"
 #import "SearchResultTableViewController.h"
+#import "TopicWebViewController.h"
 
 
 @interface HomeTableViewController ()<NSURLSessionDelegate,UISearchBarDelegate>{
@@ -102,14 +103,23 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (tableView!=self.searchDisplayController.searchResultsTableView) {
+    if (tableView==self.searchDisplayController.searchResultsTableView) {
+
+        NSString*keyword=[keyWowrdArray objectAtIndex:indexPath.row];
+        NSAssert(0!=keyword.length, @"keyword should not be nil");
+        self.searchDisplayController.searchBar.text=keyword;
+        [self searchWord:keyword];
         return;
     }
+    if (tableView==self.tableView) {
+        Topic*tp=[recommandTopicContainer.elementArray objectAtIndex:indexPath.row  ];
     
-    NSString*keyword=[keyWowrdArray objectAtIndex:indexPath.row];
-    NSAssert(0!=keyword.length, @"keyword should not be nil");
-    self.searchDisplayController.searchBar.text=keyword;
-    [self searchWord:keyword];
+        UIStoryboard*storyboard=[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+        TopicWebViewController*twvc=[storyboard instantiateViewControllerWithIdentifier:@"TopicWebViewController"];
+        twvc.topic=tp;
+        [self.navigationController pushViewController:twvc animated:YES];
+        return;
+    }
     
 }
 
