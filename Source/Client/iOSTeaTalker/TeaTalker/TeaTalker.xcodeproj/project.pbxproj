@@ -243,6 +243,13 @@
 			name = ProgressHUD;
 			sourceTree = "<group>";
 		};
+		9D35006319C14A5E0070914A /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
 		9D8E8BC5191CCC5700922416 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +421,7 @@
 		CEE94E9B18AB216B006A24F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D35006319C14A5E0070914A /* Activity */,
 				9D35005D19C144C10070914A /* ProgressHUD */,
 				9DB9654C197BE3BF00F5DCFE /* ChromeProgressBar */,
 				9DB9654F197BE3BF00F5DCFE /* IMTWebView */,

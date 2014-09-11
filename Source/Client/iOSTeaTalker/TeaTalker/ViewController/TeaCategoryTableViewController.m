@@ -7,11 +7,11 @@
 //
 
 #import "TeaCategoryTableViewController.h"
-//#import "ASIHTTPRequest.h"
 #import "TeaCategory.h"
 #import "RequestUrlStringUtility.h"
 #import "TeaCategoryArrayParser.h"
 #import "TeaCategoryViewController.h"
+#import "ProgressHUD.h"
 
 #define NameLabelTag 100
 #define CategoryImageViewTag 101
@@ -158,6 +158,7 @@
     NSURLSessionConfiguration*config=[NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession*session=[NSURLSession sessionWithConfiguration:config];
     NSURLSessionTask*task=[session dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        [ProgressHUD dismiss];
         if (nil!=error) {
              NSLog(@"Request Failed:%@",urlString);
             return ;
@@ -168,6 +169,7 @@
         [self.tableView reloadData];
         return ;
     }];
+    [ProgressHUD show:@"Waiting" Interaction:NO];
     [task resume];
 }
 @end

@@ -240,18 +240,7 @@
     
     [self.tableView reloadData];
     return;
- /*   [self.tableView beginUpdates];
-    NSMutableArray*rowArray=[[NSMutableArray alloc]init];
-    NSIndexPath*row1=[NSIndexPath indexPathForRow:IntroductionRow inSection:SpeciesSection];
-    NSIndexPath*row2=[NSIndexPath indexPathForRow:CookSkillRow inSection:SpeciesSection];
-    [rowArray addObject:row1];
-    [rowArray addObject:row2];
-    [self.tableView reloadRowsAtIndexPaths:rowArray withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self.tableView endUpdates];
-  */
 
-    
-    //[self loadSpeciesData];
     
 }
 /*
@@ -303,8 +292,7 @@
         cell.detailTextLabel.text=tp.introduction;
         return cell;
     }
-    
-   
+
 
 }
 

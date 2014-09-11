@@ -13,8 +13,9 @@
 #import "ImageInfo.h"
 #import "TopicContainerParser.h"
 #import "TeaTopicManager.h"
-
+#import "ProgressHUD.h"
 #import "ElementsContainer.h"
+
 
 #import "TopicWebViewController.h"
 @interface TopicTableViewController ()<NSURLSessionDelegate,UISearchDisplayDelegate,UISearchBarDelegate>{
@@ -223,10 +224,13 @@
 
 #pragma mark -- private mesages
 -(void)requestTopicPage:(NSInteger)pageIndex{
+   
     NSString*pageRequestUrlString=[self.topicDataManager pageRequestUrlString:pageIndex];
     NSURLSessionConfiguration*config=[NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession*session=[NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask*task=[session dataTaskWithURL:[NSURL URLWithString:pageRequestUrlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        //[MMProgressHUD dismiss];
+        [ProgressHUD dismiss];
         if (nil!=error) {
             NSLog(@"The page failed %@",[error localizedFailureReason]);
             return ;
@@ -235,6 +239,8 @@
         [self.tableView reloadData];
         
     }];
+    //[MMProgressHUD showWithTitle:@"Start" status:@"nil"];
+    [ProgressHUD show:@"Start Downloade" Interaction:NO];
     [task resume];
 }
 -(void)processTopicPage:(NSData*)data{

@@ -16,6 +16,7 @@
 #import "Topic.h"
 #import "Species.h"
 #import "SpeciesDetailTableViewController.h"
+#import "ProgressHUD.h"
 
 @interface SearchResultTableViewController ()<NSURLSessionDelegate>{
     
@@ -151,12 +152,21 @@
     }
     if ([viewcontroller class]==[SpeciesDetailTableViewController class]) {
         
+        NSAssert(0!=result.urlString.length, @"Result Species url should not be nil");
+        [ProgressHUD show:@"Waiting" Interaction:NO];
+        NSData*data=[NSData dataWithContentsOfURL:[NSURL URLWithString:result.urlString]];
+        if (data==nil) {
+            NSLog(@"The species data failed");
+            //segue.destinationViewController=nil;
+            return;
+        }
+   
         SpeciesDetailTableViewController*sdtvc=(SpeciesDetailTableViewController*)viewcontroller;
-        Species*spc=[[Species alloc]init];
-        spc.name=result.title;
-        spc.introduction=result.introduction;
-        spc.urlString=result.urlString;
+        Species*spc=[Species fakeSpecies:self.tableView.indexPathForSelectedRow.row];
         sdtvc.species=spc;
+        [ProgressHUD dismiss];
+
+        
         return;
     }
 }
