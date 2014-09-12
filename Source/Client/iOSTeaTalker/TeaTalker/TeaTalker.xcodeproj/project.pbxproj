@@ -23,6 +23,7 @@
 		9D35005C19B56CE90070914A /* TeaCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35005B19B56CE90070914A /* TeaCategoryTableViewController.m */; };
 		9D35006119C144DD0070914A /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D35005E19C144DD0070914A /* ProgressHUD.bundle */; };
 		9D35006219C144DD0070914A /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35006019C144DD0070914A /* ProgressHUD.m */; };
+		9D35008419C29CB60070914A /* SpeciesDetail1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35008319C29CB60070914A /* SpeciesDetail1TableViewController.m */; };
 		9D8E8BB91918CBBA00922416 /* Species.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB81918CBBA00922416 /* Species.m */; };
 		9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */; };
 		9D8E8BCD1921006500922416 /* CategoryIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BCC1921006500922416 /* CategoryIntroductionViewController.m */; };
@@ -106,6 +107,8 @@
 		9D35005E19C144DD0070914A /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ProgressHUD.bundle; path = view/ProgressHUD/ProgressHUD.bundle; sourceTree = "<group>"; };
 		9D35005F19C144DD0070914A /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressHUD.h; path = view/ProgressHUD/ProgressHUD.h; sourceTree = "<group>"; };
 		9D35006019C144DD0070914A /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressHUD.m; path = view/ProgressHUD/ProgressHUD.m; sourceTree = "<group>"; };
+		9D35008219C29CB60070914A /* SpeciesDetail1TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeciesDetail1TableViewController.h; path = ViewController/SpeciesDetail1TableViewController.h; sourceTree = "<group>"; };
+		9D35008319C29CB60070914A /* SpeciesDetail1TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeciesDetail1TableViewController.m; path = ViewController/SpeciesDetail1TableViewController.m; sourceTree = "<group>"; };
 		9D8E8BB71918CBBA00922416 /* Species.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Species.h; path = Model/Species.h; sourceTree = "<group>"; };
 		9D8E8BB81918CBBA00922416 /* Species.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Species.m; path = Model/Species.m; sourceTree = "<group>"; };
 		9D8E8BBA1918D06500922416 /* TeaCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaCategoryViewController.h; path = ViewController/TeaCategoryViewController.h; sourceTree = "<group>"; };
@@ -271,6 +274,8 @@
 				9D2B9095193EF34A00B3F164 /* CookSkillViewController.m */,
 				9D32BC91196ACF8000C89803 /* SpeciesDetailTableViewController.h */,
 				9D32BC92196ACF8000C89803 /* SpeciesDetailTableViewController.m */,
+				9D35008219C29CB60070914A /* SpeciesDetail1TableViewController.h */,
+				9D35008319C29CB60070914A /* SpeciesDetail1TableViewController.m */,
 			);
 			name = TeaViewController;
 			sourceTree = "<group>";
@@ -616,6 +621,7 @@
 				9DB96553197BE3BF00F5DCFE /* IMTWebView.m in Sources */,
 				9D32BC9C1971202A00C89803 /* SpeciesTopicManager.m in Sources */,
 				9DB96552197BE3BF00F5DCFE /* ChromeProgressBar.m in Sources */,
+				9D35008419C29CB60070914A /* SpeciesDetail1TableViewController.m in Sources */,
 				9D32BC93196ACF8000C89803 /* SpeciesDetailTableViewController.m in Sources */,
 				9D35005C19B56CE90070914A /* TeaCategoryTableViewController.m in Sources */,
 				9D2B9093193DCB9F00B3F164 /* TopicContainerParser.m in Sources */,
