@@ -165,8 +165,6 @@
         Species*spc=[Species fakeSpecies:self.tableView.indexPathForSelectedRow.row];
         sdtvc.species=spc;
         [ProgressHUD dismiss];
-
-        
         return;
     }
 }
