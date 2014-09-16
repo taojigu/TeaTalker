@@ -54,6 +54,8 @@
 		9D35013019C6EC2C0070914A /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35011619C6EC2C0070914A /* UIImageView+WebCache.m */; };
 		9D35013219C6ED1D0070914A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D35013119C6ED1D0070914A /* ImageIO.framework */; };
 		9D35013419C6ED350070914A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D35013319C6ED350070914A /* MapKit.framework */; };
+		9D35013819C835F80070914A /* ImageInfoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35013719C835F80070914A /* ImageInfoCollectionViewController.m */; };
+		9D35013B19C83FC50070914A /* ImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D35013A19C83FC50070914A /* ImageCollectionCell.m */; };
 		9D8E8BB91918CBBA00922416 /* Species.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB81918CBBA00922416 /* Species.m */; };
 		9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */; };
 		9D8E8BCD1921006500922416 /* CategoryIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BCC1921006500922416 /* CategoryIntroductionViewController.m */; };
@@ -196,6 +198,10 @@
 		9D35011619C6EC2C0070914A /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		9D35013119C6ED1D0070914A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		9D35013319C6ED350070914A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9D35013619C835F80070914A /* ImageInfoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageInfoCollectionViewController.h; path = ViewController/ImageInfoCollectionViewController.h; sourceTree = "<group>"; };
+		9D35013719C835F80070914A /* ImageInfoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageInfoCollectionViewController.m; path = ViewController/ImageInfoCollectionViewController.m; sourceTree = "<group>"; };
+		9D35013919C83FC50070914A /* ImageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCollectionCell.h; path = ViewController/ImageCollectionCell.h; sourceTree = "<group>"; };
+		9D35013A19C83FC50070914A /* ImageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCollectionCell.m; path = ViewController/ImageCollectionCell.m; sourceTree = "<group>"; };
 		9D8E8BB71918CBBA00922416 /* Species.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Species.h; path = Model/Species.h; sourceTree = "<group>"; };
 		9D8E8BB81918CBBA00922416 /* Species.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Species.m; path = Model/Species.m; sourceTree = "<group>"; };
 		9D8E8BBA1918D06500922416 /* TeaCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaCategoryViewController.h; path = ViewController/TeaCategoryViewController.h; sourceTree = "<group>"; };
@@ -349,6 +355,10 @@
 				9D35008619C6CD400070914A /* FullTextViewController.m */,
 				9D35008919C6CF2E0070914A /* ImageTextViewController.h */,
 				9D35008A19C6CF2E0070914A /* ImageTextViewController.m */,
+				9D35013619C835F80070914A /* ImageInfoCollectionViewController.h */,
+				9D35013719C835F80070914A /* ImageInfoCollectionViewController.m */,
+				9D35013919C83FC50070914A /* ImageCollectionCell.h */,
+				9D35013A19C83FC50070914A /* ImageCollectionCell.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -823,6 +833,7 @@
 				CEFD930818AB55D200CD3F47 /* TeaCategory.m in Sources */,
 				CEFD930B18AB563700CD3F47 /* Topic.m in Sources */,
 				CEFD931018AB56A600CD3F47 /* ElementsContainer.m in Sources */,
+				9D35013819C835F80070914A /* ImageInfoCollectionViewController.m in Sources */,
 				9D35004619ADBC710070914A /* TeaTopicManager.m in Sources */,
 				9D35005319B075830070914A /* SearchResultElement.m in Sources */,
 				9D35011D19C6EC2C0070914A /* MJPhotoLoadingView.m in Sources */,
@@ -860,6 +871,7 @@
 				9D35006219C144DD0070914A /* ProgressHUD.m in Sources */,
 				9D35012719C6EC2C0070914A /* SDWebImageDownloaderOperation.m in Sources */,
 				CEFD937B18AB804800CD3F47 /* TeaCategoryArrayParser.m in Sources */,
+				9D35013B19C83FC50070914A /* ImageCollectionCell.m in Sources */,
 				9D35012619C6EC2C0070914A /* SDWebImageDownloader.m in Sources */,
 				9D35008B19C6CF2E0070914A /* ImageTextViewController.m in Sources */,
 			);

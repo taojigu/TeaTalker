@@ -783,7 +783,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="nMD-60-Qop" kind="push" id="9Mw-Ux-8mt"/>
+                                    <segue destination="l12-mJ-W7f" kind="push" id="EK8-mr-IvK"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TopicCellIdentifer" textLabel="hGS-15-YSe" detailTextLabel="uj5-On-Wcb" style="IBUITableViewCellStyleSubtitle" id="3q5-8a-NQT">
@@ -875,31 +875,49 @@
             </objects>
             <point key="canvasLocation" x="731" y="-981"/>
         </scene>
-        <!--Image Text View Controller-->
-        <scene sceneID="z9Z-X0-jSG">
+        <!--Image Info Collection View Controller-->
+        <scene sceneID="KRX-1Y-R3c">
             <objects>
-                <viewController id="nMD-60-Qop" customClass="ImageTextViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wvY-iN-l2p"/>
-                        <viewControllerLayoutGuide type="bottom" id="YJy-z5-Wji"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BIw-cQ-f4o">
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="l12-mJ-W7f" customClass="ImageInfoCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="SFs-jC-cTe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A01-2m-pcc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="DMq-bK-Zc3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dER-TX-rjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LdY-Cc-Zt2">
+                            <size key="itemSize" width="150" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="2" maxX="5" maxY="2"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CookImageCellIdentifer" id="Cgl-3G-shR" customClass="ImageCollectionCell">
+                                <rect key="frame" x="5" y="66" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Py8-4q-RPx">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="imageView" destination="Py8-4q-RPx" id="Pd2-KZ-eN4"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="l12-mJ-W7f" id="MWJ-Pl-OE9"/>
+                            <outlet property="delegate" destination="l12-mJ-W7f" id="IRk-V8-2GE"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="nU0-Zr-cev"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ma-sN-Oot" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="-416"/>
+            <point key="canvasLocation" x="653" y="-557"/>
         </scene>
         <!--Topic Web View Controller-->
         <scene sceneID="HTh-7e-5Cv">
@@ -1006,8 +1024,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="En8-Ke-JkS"/>
         <segue reference="yqG-Ox-6Qg"/>
+        <segue reference="5LT-HZ-5id"/>
         <segue reference="EQp-7I-iV3"/>
     </inferredMetricsTieBreakers>
 </document>

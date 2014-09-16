@@ -39,7 +39,7 @@
     spc.cookText=@"水温方面，则应用约75到85℃的水。千万不要用100℃沸腾中的水，因为龙井茶是没有经过发酵的茶，所以茶叶本身十分嫩。如果用太热的水去冲泡，就会把茶叶滚坏，而且还会把苦涩的味道一并冲泡出来，影响口感。。\r\n至于在茶叶份量方面，茶叶刚好把茶盅底遮盖就够了。冲泡的时间，是要随冲泡次数而增加。\r\n更可以进一步在冲泡过程中欣赏龙井茶叶旗枪沉浮变化之美；在这里我向茶友们介绍三种龙井的冲泡法，或可称之为「龙井冲泡趣味」，";
     spc.urlString=@"http://www.163.com";
     
-    NSInteger count= arc4random()%(speciesIndex+1)+1;
+    NSInteger count=10;// arc4random()%(speciesIndex+1)+1;
     for (NSInteger imageIndex=0; imageIndex<count; imageIndex++) {
         ImageInfo*im=[ImageInfo fakeImageInfo:imageIndex];
         [spc.imageInfoArray addObject:im];

@@ -14,6 +14,7 @@
 #import "FullTextViewController.h"
 #import "ImageTextViewController.h"
 #import "TopicWebViewController.h"
+#import "ImageInfoCollectionViewController.h"
 
 
 #define SpeciesSection 0
@@ -188,6 +189,11 @@
         Topic*tp=[self.species.topicContainer.elementArray objectAtIndex:indexPath.row];
         TopicWebViewController*twvc=(TopicWebViewController*)dstvc;
         twvc.topic=tp;
+        return;
+    }
+    if ([dstvc class]==[ImageInfoCollectionViewController class]) {
+        ImageInfoCollectionViewController*iicvc=(ImageInfoCollectionViewController*)dstvc;
+        iicvc.species=self.species;
         return;
     }
 }
