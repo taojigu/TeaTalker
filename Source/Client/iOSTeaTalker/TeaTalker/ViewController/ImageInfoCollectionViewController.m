@@ -123,7 +123,7 @@
     for (NSInteger index=0; index<count; index++) {
         ImageInfo*info=[self.species.cookImageInfoArray objectAtIndex:index];
         MJPhoto*photo=[[MJPhoto alloc]init];
-        photo=[[MJPhoto alloc]init];
+        photo.text=info.introduction;
         photo.url=[NSURL URLWithString:info.imageUrlString];
         [photoArray addObject:photo];
         

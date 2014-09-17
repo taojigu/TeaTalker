@@ -26,6 +26,8 @@
     // 工具条
     MJPhotoToolbar *_toolbar;
     
+    UITextView*_textView;
+    
     // 一开始的状态栏
     BOOL _statusBarHiddenInited;
 }
@@ -53,6 +55,8 @@
     
     // 2.创建工具条
     [self createToolbar];
+    
+    [self createTextView];
 }
 
 - (void)show
@@ -79,6 +83,22 @@
     [self.view addSubview:_toolbar];
     
     [self updateTollbarState];
+}
+
+-(void)createTextView{
+    
+    CGFloat labelHeight=60;
+    CGFloat top=CGRectGetMinY(_toolbar.frame)-labelHeight;
+    _textView=[[UITextView alloc]initWithFrame:CGRectMake(0, top, CGRectGetWidth(self.view.frame), labelHeight)];
+    _textView.autoresizingMask=UIViewAutoresizingFlexibleWidth;
+    _textView.font=[UIFont systemFontOfSize:16];
+   
+    _textView.backgroundColor=[UIColor clearColor];
+    _textView.textColor=[UIColor whiteColor];
+    [self.view addSubview:_textView];
+    
+    [self updateTextView];
+    
 }
 
 #pragma mark 创建UIScrollView
@@ -259,10 +279,15 @@
     _currentPhotoIndex = _photoScrollView.contentOffset.x / _photoScrollView.frame.size.width;
     _toolbar.currentPhotoIndex = _currentPhotoIndex;
 }
+-(void)updateTextView{
+    MJPhoto*photo=[self.photos objectAtIndex:_currentPhotoIndex];
+    _textView.text=photo.text;
+}
 
 #pragma mark - UIScrollView Delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 	[self showPhotos];
     [self updateTollbarState];
+    [self updateTextView];
 }
 @end

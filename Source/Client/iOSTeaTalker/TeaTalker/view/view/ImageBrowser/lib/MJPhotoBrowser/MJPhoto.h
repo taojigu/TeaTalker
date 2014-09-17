@@ -15,6 +15,7 @@
 @property (nonatomic, strong, readonly) UIImage *capture;
 
 @property (nonatomic, assign) BOOL firstShow;
+@property(nonatomic,assign)NSString* text;
 
 // 是否已经保存到相册
 @property (nonatomic, assign) BOOL save;
