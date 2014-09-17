@@ -10,10 +10,17 @@
 #import "ImageInfo.h"
 #import "Species.h"
 #import "ImageCollectionCell.h"
+#import "MJPhoto.h"
+#import "MJPhotoBrowser.h"
+#import "UIImageView+MJWebCache.h"
 
 #define CookCellIdentifer @"CookImageCellIdentifer"
 
-@interface ImageInfoCollectionViewController ()
+@interface ImageInfoCollectionViewController (){
+    @private
+    NSMutableArray*photoArray;
+    NSMutableArray*photoViewArray;
+}
 
 @end
 
@@ -34,18 +41,27 @@
 -(id)initWithCoder:(NSCoder *)aDecoder{
     self=[super initWithCoder:aDecoder];
     if (self) {
-        self.hidesBottomBarWhenPushed=YES;
-    
+     
+        [self initSelf];
     }
-    
     return self;
+}
+
+
+-(void)initSelf{
+    self.hidesBottomBarWhenPushed=YES;
+    self.title=self.species.name;
+    photoArray=[[NSMutableArray alloc]init];
+    photoViewArray=[[NSMutableArray alloc]init];
+    return;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.hidesBottomBarWhenPushed=YES;
+    [self preparePhotoBuffer];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,10 +90,43 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     ImageInfo*info=[self.species.cookImageInfoArray objectAtIndex:indexPath.row];
-    ImageCollectionCell*cell=[collectionView dequeueReusableCellWithReuseIdentifier:CookCellIdentifer forIndexPath:indexPath];
-    cell.imageView.image=info.image;
     
+    ImageCollectionCell*cell=[collectionView dequeueReusableCellWithReuseIdentifier:CookCellIdentifer forIndexPath:indexPath];
+    __weak ImageCollectionCell*weakCell=cell;
+    MJPhoto*photo=[photoArray objectAtIndex:indexPath.row];
+    UIImage*defultImage=[UIImage imageNamed:DragonWellImageName];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:info.imageUrlString] placeholderImage:defultImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+            photo.srcImageView=weakCell.imageView;
+        }];
+
     return cell;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self showPhotoBrowserAtIndex:indexPath.row];
+    return;
+}
+
+#pragma private messages
+
+
+-(void)showPhotoBrowserAtIndex:(NSInteger)photoIndex{
+    // 2.显示相册
+    MJPhotoBrowser *browser = [[MJPhotoBrowser alloc] init];
+    browser.currentPhotoIndex = photoIndex; // 弹出相册时显示的第一张图片是？
+    browser.photos = photoArray; // 设置所有的图片
+    [browser show];
+}
+-(void)preparePhotoBuffer{
+    NSInteger count=self.species.cookImageInfoArray.count;
+    for (NSInteger index=0; index<count; index++) {
+        ImageInfo*info=[self.species.cookImageInfoArray objectAtIndex:index];
+        MJPhoto*photo=[[MJPhoto alloc]init];
+        photo=[[MJPhoto alloc]init];
+        photo.url=[NSURL URLWithString:info.imageUrlString];
+        [photoArray addObject:photo];
+        
+    }
+}
 @end

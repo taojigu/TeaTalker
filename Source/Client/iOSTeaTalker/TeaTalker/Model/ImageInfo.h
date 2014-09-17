@@ -24,4 +24,6 @@
 +(ImageInfo*)fakeImageInfo:(NSInteger)imageIndex;
 +(ImageInfo*)imageInfoFromImage:(UIImage*)image;
 
++(NSArray*)sampleImageUrlArray;
+
 @end

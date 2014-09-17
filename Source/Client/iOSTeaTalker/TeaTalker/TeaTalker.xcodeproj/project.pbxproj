@@ -454,13 +454,6 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		9D35013519C6F0D60070914A /* ImageView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ImageView;
-			sourceTree = "<group>";
-		};
 		9D8E8BC5191CCC5700922416 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,7 +630,6 @@
 		CEE94E9B18AB216B006A24F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9D35013519C6F0D60070914A /* ImageView */,
 				9D3500DF19C6EC2C0070914A /* ImageBrowser */,
 				9D35006319C14A5E0070914A /* Activity */,
 				9D35005D19C144C10070914A /* ProgressHUD */,
