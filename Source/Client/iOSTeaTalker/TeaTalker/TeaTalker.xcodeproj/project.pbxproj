@@ -12,6 +12,7 @@
 		9D2B9099193EF4CA00B3F164 /* ContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B9098193EF4CA00B3F164 /* ContentObject.m */; };
 		9D2B909C1952E33B00B3F164 /* CookTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B909B1952E33B00B3F164 /* CookTip.m */; };
 		9D2B909F1953DCBD00B3F164 /* ImageInfoUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B909E1953DCBD00B3F164 /* ImageInfoUnitView.m */; };
+		9D2D230919CAE4A600D14B2D /* TextExpandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D230819CAE4A600D14B2D /* TextExpandCell.m */; };
 		9D32BC93196ACF8000C89803 /* SpeciesDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC92196ACF8000C89803 /* SpeciesDetailTableViewController.m */; };
 		9D32BC96196E926800C89803 /* TopicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC95196E926800C89803 /* TopicWebViewController.m */; };
 		9D32BC9C1971202A00C89803 /* SpeciesTopicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D32BC9B1971202A00C89803 /* SpeciesTopicManager.m */; };
@@ -117,6 +118,8 @@
 		9D2B909B1952E33B00B3F164 /* CookTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CookTip.m; path = Model/CookTip.m; sourceTree = "<group>"; };
 		9D2B909D1953DCBD00B3F164 /* ImageInfoUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageInfoUnitView.h; path = view/view/ImageInfoUnitView.h; sourceTree = "<group>"; };
 		9D2B909E1953DCBD00B3F164 /* ImageInfoUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageInfoUnitView.m; path = view/view/ImageInfoUnitView.m; sourceTree = "<group>"; };
+		9D2D230719CAE4A600D14B2D /* TextExpandCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextExpandCell.h; path = view/cell/TextExpandCell.h; sourceTree = "<group>"; };
+		9D2D230819CAE4A600D14B2D /* TextExpandCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextExpandCell.m; path = view/cell/TextExpandCell.m; sourceTree = "<group>"; };
 		9D32BC91196ACF8000C89803 /* SpeciesDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeciesDetailTableViewController.h; path = ViewController/SpeciesDetailTableViewController.h; sourceTree = "<group>"; };
 		9D32BC92196ACF8000C89803 /* SpeciesDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeciesDetailTableViewController.m; path = ViewController/SpeciesDetailTableViewController.m; sourceTree = "<group>"; };
 		9D32BC94196E926800C89803 /* TopicWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicWebViewController.h; path = ViewController/TopicWebViewController.h; sourceTree = "<group>"; };
@@ -296,6 +299,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D2D230619CAE47C00D14B2D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEFD930218AB537600CD3F47 /* TextTableViewCell.h */,
+				CEFD930318AB537600CD3F47 /* TextTableViewCell.m */,
+				9D2D230719CAE4A600D14B2D /* TextExpandCell.h */,
+				9D2D230819CAE4A600D14B2D /* TextExpandCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		9D32BC971971141D00C89803 /* TopicDataMagaer */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,13 +644,12 @@
 		CEE94E9B18AB216B006A24F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D2D230619CAE47C00D14B2D /* Cell */,
 				9D3500DF19C6EC2C0070914A /* ImageBrowser */,
 				9D35006319C14A5E0070914A /* Activity */,
 				9D35005D19C144C10070914A /* ProgressHUD */,
 				9DB9654C197BE3BF00F5DCFE /* ChromeProgressBar */,
 				9DB9654F197BE3BF00F5DCFE /* IMTWebView */,
-				CEFD930218AB537600CD3F47 /* TextTableViewCell.h */,
-				CEFD930318AB537600CD3F47 /* TextTableViewCell.m */,
 				9D2B909D1953DCBD00B3F164 /* ImageInfoUnitView.h */,
 				9D2B909E1953DCBD00B3F164 /* ImageInfoUnitView.m */,
 			);
@@ -829,6 +842,7 @@
 				9D35004619ADBC710070914A /* TeaTopicManager.m in Sources */,
 				9D35005319B075830070914A /* SearchResultElement.m in Sources */,
 				9D35011D19C6EC2C0070914A /* MJPhotoLoadingView.m in Sources */,
+				9D2D230919CAE4A600D14B2D /* TextExpandCell.m in Sources */,
 				9D2B9099193EF4CA00B3F164 /* ContentObject.m in Sources */,
 				9D2B9096193EF34A00B3F164 /* CookSkillViewController.m in Sources */,
 				9D35012D19C6EC2C0070914A /* UIImage+MultiFormat.m in Sources */,

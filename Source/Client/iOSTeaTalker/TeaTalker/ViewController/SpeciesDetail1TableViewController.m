@@ -15,6 +15,10 @@
 #import "ImageTextViewController.h"
 #import "TopicWebViewController.h"
 #import "ImageInfoCollectionViewController.h"
+#import "TextExpandCell.h"
+
+
+#define DefaultCellHeight 44
 
 
 #define SpeciesSection 0
@@ -37,8 +41,9 @@
 @interface SpeciesDetail1TableViewController ()<NSURLSessionDelegate>{
     @private
     IBOutlet UIScrollView*imageScrollView;
-
     UIView*loadingView;
+    
+    BOOL introductionCellSelected;
     
 }
 
@@ -62,6 +67,8 @@
     if (self) {
         loadingView=[[UIView alloc]initWithFrame:CGRectZero];
         loadingView.backgroundColor=[UIColor blueColor];
+        introductionCellSelected=NO;
+        //self.tableView.autoresizesSubviews=YES;
     }
     return self;
 }
@@ -72,7 +79,9 @@
     
     if (self.species.urlString.length!=0) {
         loadingView.frame=self.tableView.bounds;
-        [self.tableView addSubview:loadingView];
+
+        self.tableView.hidden=YES;
+        [self.tableView.backgroundView addSubview:loadingView];
         [self startRequestSpeciesData];
         
     }
@@ -126,6 +135,21 @@
     return @"相关话题";
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (SpeciesSection==indexPath.section&&IntroductionRow==indexPath.row) {
+        
+        
+        return [TextExpandCell cellHeight:self.species.introduction selected:introductionCellSelected];
+    }
+    return DefaultCellHeight;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (SpeciesSection==indexPath.section&&IntroductionRow==indexPath.row) {
+        introductionCellSelected=!introductionCellSelected;
+        [self.tableView reloadData];
+    }
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -213,6 +237,7 @@
         }
         loadingView.hidden=YES;
         self.species=[Species fakeSpecies:1];
+        self.tableView.hidden=NO;
         [self.tableView reloadData];
         
     }];
@@ -230,12 +255,13 @@
 -(UITableViewCell*)speciesSectionCell:(UITableView*)tableView indexPath:(NSIndexPath*)indexPath{
     
     if (IntroductionRow==indexPath.row) {
-        UITableViewCell*tcell=(UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:IntroductionCellIdentifer];
+        TextExpandCell*tcell=(TextExpandCell*)[tableView dequeueReusableCellWithIdentifier:IntroductionCellIdentifer];
         //tcell.headerLabel.text=@"简介";
         //tcell.headerLabel.backgroundColor=[UIColor yellowColor];
         //tcell.backgroundColor=[UIColor blueColor];
-        tcell.detailTextLabel.text=self.species.introduction;
+        //tcell.detailTextLabel.text=self.species.introduction;
         //tcell.bodyLabel.backgroundColor=[UIColor greenColor];
+        tcell.fullTextLabel.text=self.species.introduction;
         
         return tcell;
     }
@@ -264,6 +290,8 @@
     
     
 }
+
+
 
                            
     
