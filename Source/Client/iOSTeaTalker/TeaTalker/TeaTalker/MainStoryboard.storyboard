@@ -171,15 +171,17 @@
             </objects>
             <point key="canvasLocation" x="-554" y="297"/>
         </scene>
-        <!--Cook Skill View Controller-->
+        <!--About View Controller-->
         <scene sceneID="l3d-TZ-Cel">
             <objects>
-                <viewController id="Dra-ls-7or" customClass="CookSkillViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XHP-pB-KK8">
+                <viewController id="Dra-ls-7or" customClass="AboutViewController" sceneMemberID="viewController">
+                    <textView key="view" clipsSubviews="YES" contentMode="scaleToFill" editable="NO" text="Loading" id="Thm-NW-Z6S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
+                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
                     <navigationItem key="navigationItem" id="PwF-gd-deF">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="o4z-zL-R14">
                             <connections>
@@ -187,15 +189,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="Thm-NW-Z6S" id="j8n-OP-tuI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T1L-Y0-Mfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-113" y="213"/>
         </scene>
-        <!--View Controller - 反馈-->
+        <!--Feedback View Controller - 反馈-->
         <scene sceneID="FVo-Z9-f6i">
             <objects>
-                <viewController title="反馈" id="7hq-iX-v12" sceneMemberID="viewController">
+                <viewController title="反馈" id="7hq-iX-v12" customClass="FeedbackViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S7I-u5-bhe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

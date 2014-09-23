@@ -24,4 +24,7 @@
 +(NSString*)searchRequestUrlString:(NSString*)word pageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize{
     return @"http://www.163.com";
 }
++(NSString*)aboutDataUrlString{
+    return @"http://www.163.com";
+}
 @end

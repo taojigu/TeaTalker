@@ -18,4 +18,6 @@
 
 +(NSString*)recommandTopicReqeustUrl:(NSInteger)pageIndex pageSize:(NSInteger)pageSize;
 +(NSString*)searchRequestUrlString:(NSString*)word pageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize;
+
++(NSString*)aboutDataUrlString;
 @end

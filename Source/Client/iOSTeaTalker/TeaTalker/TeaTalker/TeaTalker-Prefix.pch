@@ -13,4 +13,7 @@
     #import <Foundation/Foundation.h>
     #import "ElementsContainer.h"
     #import "ResourceConfigure.h"
+    #import "ResultState.h"
+    #import "RequestUrlStringUtility.h"
+    #import "ProgressHUD.h"
 #endif
