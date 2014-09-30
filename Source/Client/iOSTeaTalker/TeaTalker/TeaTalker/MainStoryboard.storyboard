@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Ugf-lb-9Mu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Ugf-lb-9Mu">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller - 分类-->
+        <!--分类-->
         <scene sceneID="hvv-1z-TGk">
             <objects>
                 <navigationController definesPresentationContext="YES" id="xxh-Nt-4nw" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-1096" y="-1082"/>
         </scene>
-        <!--Topic Table View Controller - 话题-->
+        <!--话题-->
         <scene sceneID="uVx-az-1I4">
             <objects>
                 <tableViewController storyboardIdentifier="TopicTableViewController" modalTransitionStyle="flipHorizontal" id="cD3-kY-ti2" customClass="TopicTableViewController" sceneMemberID="viewController">
@@ -115,7 +115,7 @@
             </objects>
             <point key="canvasLocation" x="-586" y="-390"/>
         </scene>
-        <!--More View Controller - 更多-->
+        <!--更多-->
         <scene sceneID="PTT-VG-yJk">
             <objects>
                 <tableViewController id="1Q1-DW-5xa" customClass="MoreViewController" sceneMemberID="viewController">
@@ -124,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutCellIdentifer" rowHeight="44" id="9ad-Bt-OnY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutCellIdentifer" rowHeight="44" id="9ad-Bt-OnY">
                                 <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9ad-Bt-OnY" id="QcG-nF-Hpv">
@@ -143,7 +143,7 @@
                                     <segue destination="Dra-ls-7or" kind="push" id="ygP-FS-n9B"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="FeedbackCellIdentifer" rowHeight="44" id="Fr7-vy-bBI">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FeedbackCellIdentifer" rowHeight="44" id="Fr7-vy-bBI">
                                 <rect key="frame" x="0.0" y="163" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fr7-vy-bBI" id="Zsf-th-cmp">
@@ -159,7 +159,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7hq-iX-v12" kind="push" id="bBD-1W-9N6"/>
+                                    <segue destination="7hq-iX-v12" kind="push" id="fun-Vb-cQq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -197,7 +197,7 @@
             </objects>
             <point key="canvasLocation" x="-113" y="213"/>
         </scene>
-        <!--Feedback View Controller - 反馈-->
+        <!--反馈-->
         <scene sceneID="FVo-Z9-f6i">
             <objects>
                 <viewController title="反馈" id="7hq-iX-v12" customClass="FeedbackViewController" sceneMemberID="viewController">
@@ -205,29 +205,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q7b-zv-B0H">
-                                <rect key="frame" x="118" y="382" width="73" height="30"/>
+                            <view contentMode="scaleToFill" id="2ps-QC-xaH" customClass="JTSTextView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97459013661932059" blue="0.98584037530449242" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="反馈意见" id="S86-85-fah">
+                        <barButtonItem key="rightBarButtonItem" id="BMp-j0-Wg4">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wiQ-Np-TEG">
+                                <rect key="frame" x="233" y="5" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="发送">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="反馈内容" id="Rjd-bl-KNe">
-                                <rect key="frame" x="14" y="15" width="280" height="251"/>
-                                <color key="backgroundColor" red="0.93497284062860442" green="1" blue="0.28807022237831437" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.97459013661932059" blue="0.98584037530449242" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="S86-85-fah"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="textView" destination="2ps-QC-xaH" id="bEj-a4-Bxd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOt-zF-qRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129" y="859"/>
+            <point key="canvasLocation" x="-123" y="942"/>
         </scene>
-        <!--Home Table View Controller - 搜索-->
+        <!--搜索-->
         <scene sceneID="BWs-X6-iAO">
             <objects>
                 <tableViewController title="搜索" id="EQ3-cI-eR7" customClass="HomeTableViewController" sceneMemberID="viewController">
@@ -387,7 +394,7 @@
             </objects>
             <point key="canvasLocation" x="-997" y="1182"/>
         </scene>
-        <!--Navigation Controller - 首页-->
+        <!--首页-->
         <scene sceneID="X1p-cT-ndA">
             <objects>
                 <navigationController definesPresentationContext="YES" id="8g8-0H-vSL" sceneMemberID="viewController">
@@ -435,7 +442,7 @@
             </objects>
             <point key="canvasLocation" x="-1208" y="-381"/>
         </scene>
-        <!--Tea Category Table View Controller - 首页-->
+        <!--首页-->
         <scene sceneID="Ksj-27-xsH">
             <objects>
                 <tableViewController title="首页" id="J1c-DP-yyx" customClass="TeaCategoryTableViewController" sceneMemberID="viewController">
@@ -568,13 +575,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="LyY-99-b6K"/>
-                    <size key="freeformSize" width="320" height="568"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWX-ZN-XXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-348" y="-1082"/>
         </scene>
-        <!--Species Detail Table View Controller - 品种详情-->
+        <!--品种详情-->
         <scene sceneID="FeW-L8-GnU">
             <objects>
                 <tableViewController storyboardIdentifier="SpeciesDetailTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZgV-4i-inT" customClass="SpeciesDetailTableViewController" sceneMemberID="viewController">
@@ -661,7 +667,7 @@
             </objects>
             <point key="canvasLocation" x="348" y="-1275"/>
         </scene>
-        <!--Species Detail1 Table View Controller - 品种-->
+        <!--品种-->
         <scene sceneID="ifU-U4-xYP">
             <objects>
                 <tableViewController title="品种" id="Bvk-2y-LbG" customClass="SpeciesDetail1TableViewController" sceneMemberID="viewController">

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D03740D19DA4D3C0069EA9F /* JTSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D03740C19DA4D3C0069EA9F /* JTSTextView.m */; };
 		9D2B9093193DCB9F00B3F164 /* TopicContainerParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B9092193DCB9F00B3F164 /* TopicContainerParser.m */; };
 		9D2B9096193EF34A00B3F164 /* CookSkillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B9095193EF34A00B3F164 /* CookSkillViewController.m */; };
 		9D2B9099193EF4CA00B3F164 /* ContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B9098193EF4CA00B3F164 /* ContentObject.m */; };
@@ -61,6 +62,7 @@
 		9D592BAB19D0325E0089CBDB /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D592BAA19D0325E0089CBDB /* About.m */; };
 		9D592BAE19D032CE0089CBDB /* ResultState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D592BAD19D032CE0089CBDB /* ResultState.m */; };
 		9D592BB119D127260089CBDB /* AboutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D592BB019D127260089CBDB /* AboutParser.m */; };
+		9D592BB819D15EAE0089CBDB /* UITextView+insets.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D592BB719D15EAE0089CBDB /* UITextView+insets.m */; };
 		9D8E8BB91918CBBA00922416 /* Species.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BB81918CBBA00922416 /* Species.m */; };
 		9D8E8BBC1918D06500922416 /* TeaCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BBB1918D06500922416 /* TeaCategoryViewController.m */; };
 		9D8E8BCD1921006500922416 /* CategoryIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E8BCC1921006500922416 /* CategoryIntroductionViewController.m */; };
@@ -112,6 +114,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D03740B19DA4D3C0069EA9F /* JTSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTSTextView.h; path = view/view/JTSTextView.h; sourceTree = "<group>"; };
+		9D03740C19DA4D3C0069EA9F /* JTSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTSTextView.m; path = view/view/JTSTextView.m; sourceTree = "<group>"; };
 		9D2B9091193DCB9F00B3F164 /* TopicContainerParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicContainerParser.h; path = Model/TopicContainerParser.h; sourceTree = "<group>"; };
 		9D2B9092193DCB9F00B3F164 /* TopicContainerParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopicContainerParser.m; path = Model/TopicContainerParser.m; sourceTree = "<group>"; };
 		9D2B9094193EF34A00B3F164 /* CookSkillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CookSkillViewController.h; path = ViewController/CookSkillViewController.h; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 		9D592BAD19D032CE0089CBDB /* ResultState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultState.m; path = Model/ResultState.m; sourceTree = "<group>"; };
 		9D592BAF19D127260089CBDB /* AboutParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutParser.h; path = Model/AboutParser.h; sourceTree = "<group>"; };
 		9D592BB019D127260089CBDB /* AboutParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutParser.m; path = Model/AboutParser.m; sourceTree = "<group>"; };
+		9D592BB619D15EAE0089CBDB /* UITextView+insets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+insets.h"; path = "Util/Category/UITextView+insets.h"; sourceTree = "<group>"; };
+		9D592BB719D15EAE0089CBDB /* UITextView+insets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+insets.m"; path = "Util/Category/UITextView+insets.m"; sourceTree = "<group>"; };
 		9D8E8BB71918CBBA00922416 /* Species.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Species.h; path = Model/Species.h; sourceTree = "<group>"; };
 		9D8E8BB81918CBBA00922416 /* Species.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Species.m; path = Model/Species.m; sourceTree = "<group>"; };
 		9D8E8BBA1918D06500922416 /* TeaCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeaCategoryViewController.h; path = ViewController/TeaCategoryViewController.h; sourceTree = "<group>"; };
@@ -311,6 +317,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D03740A19DA4D150069EA9F /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				9D03740B19DA4D3C0069EA9F /* JTSTextView.h */,
+				9D03740C19DA4D3C0069EA9F /* JTSTextView.m */,
+			);
+			name = TextView;
+			sourceTree = "<group>";
+		};
 		9D2D230619CAE47C00D14B2D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +512,15 @@
 			name = More;
 			sourceTree = "<group>";
 		};
+		9D592BB219D15AA10089CBDB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9D592BB619D15EAE0089CBDB /* UITextView+insets.h */,
+				9D592BB719D15EAE0089CBDB /* UITextView+insets.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		9D8E8BC5191CCC5700922416 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -670,6 +694,7 @@
 		CEE94E9B18AB216B006A24F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D03740A19DA4D150069EA9F /* TextView */,
 				9D2D230619CAE47C00D14B2D /* Cell */,
 				9D3500DF19C6EC2C0070914A /* ImageBrowser */,
 				9D35006319C14A5E0070914A /* Activity */,
@@ -696,6 +721,7 @@
 		CEFD931618AB680400CD3F47 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				9D592BB219D15AA10089CBDB /* Category */,
 				CEFD937418AB79D000CD3F47 /* CustomUtl */,
 			);
 			name = Util;
@@ -762,7 +788,7 @@
 			name = TeaTalkerTests;
 			productName = TeaTalkerTests;
 			productReference = CED577BA18A5D3430025C83C /* TeaTalkerTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -884,6 +910,7 @@
 				9D35012319C6EC2C0070914A /* SDImageCache.m in Sources */,
 				9D35012419C6EC2C0070914A /* SDWebImageCompat.m in Sources */,
 				CEFD931118AB56A600CD3F47 /* ImageInfo.m in Sources */,
+				9D592BB819D15EAE0089CBDB /* UITextView+insets.m in Sources */,
 				9D35012519C6EC2C0070914A /* SDWebImageDecoder.m in Sources */,
 				9DB96553197BE3BF00F5DCFE /* IMTWebView.m in Sources */,
 				9D35012C19C6EC2C0070914A /* UIImage+GIF.m in Sources */,
@@ -910,6 +937,7 @@
 				9D35012719C6EC2C0070914A /* SDWebImageDownloaderOperation.m in Sources */,
 				CEFD937B18AB804800CD3F47 /* TeaCategoryArrayParser.m in Sources */,
 				9D35013B19C83FC50070914A /* ImageCollectionCell.m in Sources */,
+				9D03740D19DA4D3C0069EA9F /* JTSTextView.m in Sources */,
 				9D35012619C6EC2C0070914A /* SDWebImageDownloader.m in Sources */,
 				9D35008B19C6CF2E0070914A /* ImageTextViewController.m in Sources */,
 			);
@@ -1020,6 +1048,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TeaTalker/TeaTalker-Prefix.pch";
 				INFOPLIST_FILE = "TeaTalker/TeaTalker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -1035,6 +1064,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TeaTalker/TeaTalker-Prefix.pch";
 				INFOPLIST_FILE = "TeaTalker/TeaTalker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
